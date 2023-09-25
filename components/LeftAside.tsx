@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { TbLayersIntersect } from 'react-icons/tb'
 import { ProgressBar } from './ProgressBar'
 import SkillsSection from './SkillsSection';
 
@@ -14,9 +13,9 @@ const LefAside = () => {
     return (
         <aside className=" flex flex-col w-[305px] h-full bg-white text-text-primary items-center">
             <div className='relative flex flex-col h-fit mx-[74px] mt-[50px] mb-[60px] text-center items-center'>
-                <div className="h-4 w-4 bg-verde rounded-full absolute bottom-28 left-[125px]"></div>
+                <div className="h-4 w-4 bg-verde rounded-full absolute bottom-28 left-[125px] border-2 border-white dark:border-gray-800"></div>
                 <Image
-                    className='rounded-full'
+                    className='rounded-full hover:w-full hover:h-full transition-shadow duration-500 ease-in-out'
                     src="/img/perfil.jpg"
                     alt="Perfil photo"
                     width={150}

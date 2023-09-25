@@ -4,7 +4,7 @@ import {FaLinkedinIn, FaFacebookF} from 'react-icons/fa'
 
 const RightAside = () => {
     return (
-        <aside className='flex flex-col gap-5 items-center w-[97px] h-full bg-white border border-blue-700 pt-[73px]'>
+        <aside className='flex flex-col gap-5 items-center w-[97px] h-full bg-white pt-[73px]'>
 
         <h3 className="text-lg font-bold bordr">Links</h3>
 
