@@ -3,26 +3,11 @@ name: CI/CD para NextJS
 on: [pull_request]
 
 jobs:
-  cache:
-    name: Cachear dependencias yarn
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/cache@v3
-        with:
-          key: ${{ runner.os }}-yarn-${{ hashFiles('.yarnrc.yml') }}
-          path: ~/.cache/yarn
-
   lint:
     name: Lint
-    needs: cache
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/cache/restore@v3
-        with:
-          key: ${{ runner.os }}-yarn-${{ hashFiles('.yarnrc.yml') }}
-          path: ~/.cache/yarn
       - name: Install dependencies
         run: yarn install
       - name: Lint
