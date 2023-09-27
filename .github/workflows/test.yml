@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   cache:
-    name: Cachear dependencias
+    name: Cachear dependencias yarn
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
