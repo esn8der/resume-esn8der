@@ -7,7 +7,7 @@ jobs:
     name: Cachear dependencias
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: actions/cache@v3
         with:
           key: ${{ runner.os }}-yarn-${{ hashFiles('.yarnrc.yml') }}
@@ -18,7 +18,7 @@ jobs:
     needs: cache
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: actions/restore-cache@v3
         with:
           key: ${{ runner.os }}-yarn-${{ hashFiles('.yarnrc.yml') }}
