@@ -2,7 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.scrollbox::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scrollbox::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbox::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.scrollbox:hover::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+}
+
+.scrollbox::-webkit-scrollbar-thumb:hover {
+  background: #898989;
+}
+
+.scrollbox::-webkit-scrollbar-thumb:active {
+  background: #a5a5a5;
+}
+
+.scrollbox {
+  scrollbar-gutter: stable;
 }
