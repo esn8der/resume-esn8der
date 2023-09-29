@@ -2,8 +2,8 @@ import Image from "next/image"
 
 export default function casa() {
     return (
-        <main className='flex flex-row h-screen  justify-center bg-[#F0F0F6] gap-4  border border-red-500'>
-            <aside className="relative flex flex-col w-[305px] h-full bg-white border border-red-500 items-center">
+        <main className='flex flex-row h-screen  justify-center bg-[#F0F0F6] gap-4  border border-red-500 background'>
+            <aside className="relative flex flex-col w-[305px] h-full bg-white items-center">
                 <div className='flex flex-col h-fit mx-[74px] mt-[50px] mb-[60px] text-center items-center border'>
                     <div className="h-4 w-4 bg-[#7EB942] rounded-full absolute top-[172px] left-[198px]"></div>
                     <Image

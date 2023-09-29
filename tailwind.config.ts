@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         'text-primary': '#2B2B2B',
         'text-secondary': '#767676',
+        'bg-blanco': '#000000',
         'amarillo': '#FFB400',
         'verde': '#7EB942',
         'lines': '#F0F0F6',

@@ -8,7 +8,7 @@ const ProgressBar = ({ name, progress }: ProgressBarProps) => {
   const barWidth = `${progressValue}%`;
 
   return (
-    <div className="space-y-[5px]">
+    <div className="space-y-[4px]">
       <div className="flex justify-between text-text-secondary">
         <h4>{name}</h4>
         <h4>{progress}%</h4>

@@ -1,16 +1,16 @@
 import Image from "next/image";
-import { Arimo, Inter, Oxanium } from "next/font/google";
+import { Oxanium } from "next/font/google";
 import { LefAside } from "@/components/LeftAside";
 import { RightAside } from "@/components/RigthAside";
 import { CardKnowledge } from "@/components/CardKnowledge";
+import { CardEducation } from "@/components/CardEducation";
 
 import { BsArrowRightShort, BsDatabaseGear, BsGear } from "react-icons/bs";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
 import { SiSpringsecurity } from "react-icons/si";
 import { MdOutlineManageAccounts, MdOutlineChevronRight } from "react-icons/md";
+import { CardPortfolio } from "@/components/CardPortfolio";
 
-const inter = Inter({ subsets: ["latin"] });
-const arimo = Arimo({ subsets: ["latin"] });
 const oxanium = Oxanium({ subsets: ["latin"] });
 
 const knowledgeData = [
@@ -44,7 +44,7 @@ const knowledgeData = [
 export default function Home() {
   return (
     <main
-      className={`${oxanium.className} flex flex-row h-screen justify-between bg-lines gap-4 p-4 rounded-xl`}
+      className={`${oxanium.className} flex flex-row h-screen justify-between {bg-lines} background gap-4 p-4`}
     >
       <LefAside />
 
@@ -61,7 +61,7 @@ export default function Home() {
               estudiante
             </h1>
 
-            <p className="text-[16px] leading-6 text-text-secondary font-normal mt-5 {truncate line-clamp-3} {whitespace-break-spaces} {hover:line-clamp-none}">
+            <p className="text-[16px] leading-6 text-text-secondary font-normal mt-5">
               Soy un estudiante de Ingeniería de Sistemas con un fuerte interés
               tanto en el desarrollo backend, centrado en Java y Spring Boot,
               como en el frontend, donde estoy explorando tecnologías como
@@ -132,30 +132,32 @@ export default function Home() {
             </p>
           </div>
           <div className="bg-white">
-            <div className="flex bg-white px-14 my-10">
-              <div className="flex flex-row flex-wrap basis-2/3 gap-x-5 ">
-                <h3 className="basis-full text-lg font-semibold">
-                  Universidad De Antioquia
-                </h3>
-                <span className="self-center">Studen</span>
-                <span className="bg-amarillo text-xs self-center p-1 text-white ">
-                  Agosto 2017 - Actual
-                </span>
-              </div>
-              <div className="space-y-8 basis-full">
-                <h3 className="text-lg font-semibold">
-                  Certificate Of Web Training
-                </h3>
-                <p className="text-text-secondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cumque exercitationem odio laborum quis, non repellendus fuga
-                  praesentium quos reiciendis totam
-                </p>
-              </div>
-            </div>
+            <CardEducation
+              courseName="Ingeniería de Sistemas"
+              institution="Universidad de Antioquia"
+              participantStatus="Student"
+              date="Agosto 2017 - Actual"
+              description="Pronto a culminar mi programa de Ingeniería de Sistemas en la Universidad de Antioquia, 
+                          he sido formado en un enfoque investigativo y centrado en competencias. Mi formación abarca 
+                            tanto los fundamentos científicos y tecnológicos como la preparación para la Cuarta Revolución Industrial, 
+                            incluyendo tecnologías como Blockchain, Inteligencia Artificial y el Internet de las Cosas. 
+                            Estoy listo para aplicar estos conocimientos en la resolución de problemas y la innovación tecnológica."
+            />
+
             <div className="container">
               <hr className="m-5" />
             </div>
+
+            <CardEducation
+              courseName="Introducción a la programación en JavaScript"
+              institution="Universidad Distrital Francisco José de Caldas"
+              participantStatus="Student"
+              date="Septiembre 2023 - Actual"
+              description="Actualmente, estoy cursando un programa de 50 horas que se enfoca en JavaScript y la programación web. 
+                          Cubre temas esenciales como variables, tipos de datos y maquetación de aplicativos, así como temas avanzados, 
+                          como interfaces web y bases de datos. El curso se destaca por su enfoque práctico y resolución de desafíos, 
+                          lo que me prepara para proyectos futuros en desarrollo web."
+            />
           </div>
         </div>
 
@@ -174,106 +176,30 @@ export default function Home() {
             </p>
           </div>
           <div className="flex items-start justify-between text-center gap-8 overflow-x-scroll scrollbox">
-            <div className="rounded-lg overflow-hidden bg-white hover:bg-teal-100 transition-colors duration-300 ease-in max-w-fit min-w-fit basis-1/3">
-              <div className="p-4">
-                <Image
-                  className="rounded-lg"
-                  src="/img/hero.jpeg"
-                  alt=""
-                  width={352}
-                  height={198}
-                />
-              </div>
-              <div className="p-4 max-w-[384px] self-center ">
-                <h2 className="text-xl font-bold mb-2 self-center">
-                  This is some title
-                </h2>
-                <p className="text-gray-700">
-                  Curabitur convallis ac quam vitae laoreet. Nulla mauris ante,
-                  euismod sed lacus sit amet, congue bibendum eros. Etiam mattis
-                  lobortis porta. Vestibulum ultrices iaculis enim imperdiet
-                  egestas.
-                </p>
-                <span className="text-text-secondary text-lg font-bold">
-                  Read more
-                </span>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden bg-white hover:bg-teal-100 transition-colors duration-300 ease-in max-w-fit min-w-fit basis-1/3">
-              <div className="p-4">
-                <Image
-                  className="rounded-lg"
-                  src="/img/clon.jpeg"
-                  alt=""
-                  width={352}
-                  height={198}
-                />
-              </div>
-              <div className="p-4 max-w-[384px]">
-                <h2 className="text-xl font-bold mb-2">This is some title</h2>
-                <p className="text-gray-700">
-                  Curabitur convallis ac quam vitae laoreet. Nulla mauris ante,
-                  euismod sed lacus sit amet, congue bibendum eros. Etiam mattis
-                  lobortis porta. Vestibulum ultrices iaculis enim imperdiet
-                  egestas.
-                </p>
-                <span className="text-text-secondary text-lg font-bold">
-                  Read more
-                </span>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden bg-white hover:bg-teal-100 transition-colors duration-300 ease-in max-w-fit min-w-fit basis-1/3">
-              <div className="p-4">
-                <Image
-                  className="rounded-lg shadow-xl hover:shadow-amarillo transition-colors duration-300 ease-in"
-                  src="/img/angular.jpeg"
-                  alt=""
-                  width={352}
-                  height={198}
-                />
-              </div>
-              <div className="p-4 max-w-[384px]">
-                <h2 className="text-xl font-bold mb-2">This is some title</h2>
-                <p className="text-gray-700">
-                  Curabitur convallis ac quam vitae laoreet. Nulla mauris ante,
-                  euismod sed lacus sit amet, congue bibendum eros. Etiam mattis
-                  lobortis porta. Vestibulum ultrices iaculis enim imperdiet
-                  egestas.
-                </p>
-                <span className="text-text-secondary text-lg font-bold">
-                  Read more
-                </span>
-              </div>
-            </div>
-            <div className="rounded-lg overflow-hidden bg-white hover:bg-teal-100 transition-colors duration-300 ease-in max-w-fit min-w-fit basis-1/3">
-              <div className="p-4">
-                <Image
-                  className="rounded-lg"
-                  src="/img/todo.jpeg"
-                  alt=""
-                  width={352}
-                  height={198}
-                />
-              </div>
-              <div className="p-4 max-w-[384px]">
-                <h2 className="text-xl font-bold mb-2">This is some title</h2>
-                <p className="text-gray-700">
-                  Curabitur convallis ac quam vitae laoreet. Nulla mauris ante,
-                  euismod sed lacus sit amet, congue bibendum eros. Etiam mattis
-                  lobortis porta. Vestibulum ultrices iaculis enim imperdiet
-                  egestas.
-                </p>
-                <span className="text-text-secondary text-lg font-bold">
-                  Read more
-                </span>
-              </div>
-            </div>
+            <CardPortfolio
+              img="/img/hero.jpeg"
+              title="Tour of Heroes Api"
+              description="Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas."
+            />
+            <CardPortfolio
+              img="/img/angular.jpeg"
+              title="Tour of Heroes Frontend"
+              description="Proyecto Angular - 'Tour of Heroes': Una aplicación web interactiva desarrollada con Angular que demuestra mis habilidades en el desarrollo frontend"
+            />
+            <CardPortfolio
+              img="/img/clon.jpeg"
+              title="Clon layout de Spotify"
+              description="Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas."
+            />
+            <CardPortfolio
+              img="/img/todo.jpeg"
+              title="Api de una ToDo App"
+              description="Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas."
+            />
           </div>
         </div>
         <footer>
-          <div className="bg-white rounded-t-lg w-full h-20">
-              Footer xD
-          </div>
+          <div className="bg-white rounded-t-lg w-full h-20">Footer xD</div>
         </footer>
       </div>
       <RightAside />
