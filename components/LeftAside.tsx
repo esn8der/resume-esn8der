@@ -11,9 +11,12 @@ const skillsList = [
 
 const LefAside = () => {
   return (
-    <aside className=" flex flex-col w-full max-w-[20%] min-w-fit h-full bg-white text-text-primary items-center rounded-lg ">
+    <aside className=" flex flex-col w-full max-w-[20%] min-w-fit h-full bg-primaryBG text-white items-center rounded-lg ">
       <div className="relative flex flex-col h-fit mx-[74px] mt-10  text-center items-center">
-        <div className="h-5 w-5 bg-verde rounded-full absolute bottom-28 left-[123px] border-2 border-white dark:border-gray-800"></div>
+        <span className="absolute flex h-5 w-5 bottom-24 left-[125px]">
+          <span className="animate-ping absolute h-full w-full rounded-full bg-[#00d68f] opacity-75"></span>
+          <span className="rounded-full h-full w-full bg-[#00d68f]"></span>
+        </span>
         <Image
           className="rounded-full"
           src="/img/perfil.jpg"
@@ -23,7 +26,7 @@ const LefAside = () => {
         />
         <div className="flex flex-col gap-3">
           <h3 className="text-lg font-[550] mt-4">Esneider Ballesta</h3>
-          <p className="text-[15px] leading-6 text-text-secondary whitespace-nowrap">
+          <p className="text-[15px] leading-6 text-[#c6c4d0] whitespace-nowrap">
             Ingeniería De Sistemas
           </p>
         </div>

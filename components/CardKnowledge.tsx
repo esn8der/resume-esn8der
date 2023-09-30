@@ -13,12 +13,10 @@ const CardKnowledge = ({ knowledgeData }: CardKnowledgeProps) => {
     <>
       {knowledgeData.map((knowledge, index) => (
         <div
-          className="flex flex-col bg-white items-center text-center pt-6 pb-10"
+          className="flex flex-col bg-primaryBG items-center text-center pt-6 pb-10 mx-2 shadow-lg shadow-[#00d68f] rounded-lg hover:scale-95"
           key={index}
         >
-          <div className="relative text-amarillo ">
-            <knowledge.Icon className="text-8xl" />
-          </div>
+          <knowledge.Icon className="text-8xl text-[#00d68f]" />
           <div className="space-y-4 mt-6">
             <h4>{knowledge.title}</h4>
             <p className="text-text-secondary self-center">
