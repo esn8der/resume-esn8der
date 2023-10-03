@@ -14,11 +14,11 @@ const CardEducation = ({
   participantStatus,
 }: CardEducationProps) => {
   return (
-    <div className="flex bg-primaryBG px-14 my-10">
+    <div className="flex bg-primaryBG px-14 my-10 text-text-primary">
       <div className="flex flex-row flex-wrap basis-2/3 gap-x-5 ">
         <h3 className="basis-full text-lg font-semibold">{institution}</h3>
         <span className="self-center">{participantStatus}</span>
-        <span className="bg-amarillo text-xs self-center p-1 text-white ">
+        <span className="bg-gradient-to-l from-[#005639]  to-emerald-500 text-xs self-center p-1 text-white ">
           {date}
         </span>
       </div>

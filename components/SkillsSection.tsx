@@ -6,10 +6,10 @@ interface SkillsSectionProps {
 
 const SkillsSection = ({ skills }: SkillsSectionProps) => (
   <div className="flex flex-col gap-1 max-w-full self-start px-10">
-    <h3 className="text-lg font-[550] mb-2">Extra Skills</h3>
+    <h3 className="text-lg font-[550] mb-2">Habilidades Extra</h3>
     {skills.map((skill, index) => (
       <div key={index} className="flex gap-4">
-        <TbLayersIntersect className="stroke-[#00d68f] text-xl scale-x-[-1]" />
+        <TbLayersIntersect className="stroke-emerald-500 text-xl scale-x-[-1]" />
         <p className="text-[#c6c4d0]">{skill}</p>
       </div>
     ))}
