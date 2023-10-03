@@ -35,7 +35,7 @@ body {
 }
 
 .background {
-  background: #1b1b38;/* #160430; */
+  background: #1b1b38;
   background-image: url('/img/pattern.svg'),linear-gradient(to bottom,rgb(103 0 255 / 15%),transparent),linear-gradient(to bottom left,rgb(255 0 201 / 10%),transparent 50%);
   background-size: 4px 4px,100vw 200vh,100vw 200vh;
   background-repeat: repeat,no-repeat,no-repeat
@@ -45,7 +45,7 @@ body {
   text-wrap: balance;
 }
 
-a {
+.enlace {
   color: #dfe5f3;
   text-decoration: none;
   background-image: linear-gradient(#222b40, #222b40),
@@ -57,7 +57,7 @@ a {
   transition: background-size 2s linear, background-position 2s linear;
 }
 
-a:hover {
+.enlace:hover {
   background-size: 20px 2px, 0 2px, 100% 2px;
   background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
 }

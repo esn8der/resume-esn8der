@@ -13,9 +13,9 @@ const ProgressBar = ({ name, progress }: ProgressBarProps) => {
         <h4>{name}</h4>
         <h4>{progress}%</h4>
       </div>
-      <div className="border border-[#00d68f] rounded-full h-[6px] p-[1px]">
+      <div className="border border-emerald-500 rounded-full h-[6px] p-[1px]">
         <div
-          className="bg-[#00d68f] h-[2px] rounded-full"
+          className="bg-emerald-500 h-[2px] rounded-full"
           style={{ width: barWidth }}
         ></div>
       </div>

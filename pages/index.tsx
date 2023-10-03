@@ -1,7 +1,7 @@
 import { CardEducation } from "@/components/CardEducation";
 import { CardKnowledge } from "@/components/CardKnowledge";
 import { LefAside } from "@/components/LeftAside";
-import { RightAside } from "@/components/RigthAside";
+import { RightAside } from "@/components/RightAside";
 import { Oxanium } from "next/font/google";
 import Image from "next/image";
 
@@ -49,13 +49,13 @@ export default function Home() {
       <LefAside />
 
       <div className="flex flex-col gap-11 w-max rounded-t-lg overflow-x-hidden overflow-y-scroll scrollbox">
-        <div className="grid grid-flow-col-dense bg-primaryBG w-full h-[468px] px-16 pt-20 rounded-lg">
-          <div className="w-[650px]">
+        <div className="grid grid-flow-col-dense bg-primaryBG w-full h-[468px] px-16 rounded-lg">
+          <div className="w-[650px] pt-20 pb-10">
             <h1 className="text-[48px] leading-10 text-text-primary font-bold relative">
               Soy Esneider Ballesta,
               <br />
               un{" "}
-              <span className=" before:absolute before:-inset-1 before:-skew-y-1 before:bg-[#00d68f] relative inline-block">
+              <span className=" before:absolute before:-inset-1 before:-skew-y-1 before:bg-emerald-400 relative inline-block">
                 <span className="relative text-green-800">apasionado</span>
               </span>{" "}
               estudiante
@@ -71,20 +71,20 @@ export default function Home() {
               construcción de aplicaciones robustas y completas que tengan un
               impacto positivo en el mundo.
             </p>
-            <button className="bg-gradient-to-l from-[#005639]  hover:to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-8 py-3 mt-10">
+            <button className="bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-8 py-3 mt-10">
               Hire Me
-              <BsArrowRightShort className="inline-block ml-1 text-2xl" />
+              <BsArrowRightShort className="inline-block ml-1 text-2xl group-hover:translate-x-1 transition-transform duration-300 ease-in" />
             </button>
           </div>
-          <div className="place-self-center">
-            <Image src="/img/man.png" alt="hero" width={280} height={380} />
+          <div className="justify-self-center self-end ">
+            <Image src="/img/man.png" alt="hero" width={280} height={430} />
           </div>
         </div>
 
         <div className="flex flex-col w-full items-center self-center">
           <div className="flex flex-col items-center justify-center text-center px-48 mb-12 ">
             <h2 className="text-[32px] leading-10 text-text-primary font-bold">
-              My Knowledge
+              Mis Conocimientos
             </h2>
             <p className="text-[15px] leading-6 text-text-secondary font-normal mt-6">
               En mis estudios y proyectos, me he centrado en el desarrollo
@@ -100,16 +100,16 @@ export default function Home() {
           <div className="grid sm:grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3 gap-5 ">
             <CardKnowledge knowledgeData={knowledgeData} />
             <div className="flex flex-col bg-primaryBG items-center text-center pt-8 pb-10 gap-4 px-14 mx-2 shadow-lg shadow-[#00d68f] rounded-lg hover:scale-95 ">
-              <h4>Advertising</h4>
+              <h4>Publicidad</h4>
               <p className="text-text-secondary self-center">
                 Integrando estrategias de marketing y publicidad para estimular
                 la interacción y el crecimiento.
               </p>
               <div className="text-amarillo hover:underline cursor-pointer">
-                <span>
-                  Order now
+                <a className="enlace">
+                  Ordenar ya
                   <MdOutlineChevronRight className="inline-block text-xl" />
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function Home() {
         <div className="flex flex-col">
           <div className="flex flex-col items-center justify-center text-center px-48 mb-12">
             <h2 className="text-[32px] leading-10 text-text-primary font-bold">
-              Education
+              Educación
             </h2>
             <p className="text-[15px] leading-6 text-text-secondary font-normal mt-6">
               En mis estudios y proyectos, me he centrado en el desarrollo
@@ -164,7 +164,7 @@ export default function Home() {
         <div>
           <div className="flex flex-col items-center justify-center text-center px-48 mb-12">
             <h2 className="text-[32px] leading-10 text-text-primary font-bold">
-              Portfolio
+              Portafolio
             </h2>
             <p className="text-[15px] leading-6 text-text-secondary font-normal mt-6">
               A lo largo de mi viaje en el mundo del desarrollo de software, he
@@ -202,7 +202,7 @@ export default function Home() {
           <div className="bg-primaryBG rounded-t-lg w-full py-5 px-10 text-center text-sm text-text-secondary">
             <p>
               Creado como parte de un trabajo para la materia de Ingeniería Web.
-              Hecho Next.js y Tailwind CSS.
+              Hecho con Next.js y Tailwind CSS.
             </p>
 
             <div className="container">
@@ -213,7 +213,7 @@ export default function Home() {
               Por{" "}
               <a
                 href="https://github.com/esn8der"
-                className="text-blue-500"
+                className="text-blue-500 enlace"
               >
                 @esn8der
               </a>
