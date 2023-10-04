@@ -102,7 +102,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3 gap-5 ">
             <CardKnowledge knowledgeData={knowledgeData} />
             <div className="flex flex-col bg-primaryBG items-center text-center pt-8 pb-10 gap-4 px-14 mx-2 shadow-lg shadow-[#00d68f] rounded-lg hover:scale-95 ">
-              <h4>Publicidad</h4>
+              <h3 className="text-text-primary">Publicidad</h3>
               <p className="text-text-secondary self-center">
                 Integrando estrategias de marketing y publicidad para estimular
                 la interacción y el crecimiento.
@@ -182,33 +182,44 @@ export default function Home() {
               img="/img/hero.jpeg"
               title="Tour of Heroes - Api"
               description="API REST para administrar una lista de héroes. Está desarrollada con Spring Boot"
+              projectStatus="Terminado"
+              additionalInfo="La API está desplegada en Heroku y se puede acceder a ella a través de este enlace: https://tour-of-heroes-api.herokuapp.com/"
             />
             <CardPortfolio
               img="/img/angular.jpeg"
               title="Tour of Heroes - Frontend"
               description="Aplicación web desarrollada con Angular que demuestra mis habilidades en el frontend"
+
+              projectStatus="Terminado"
+              additionalInfo="La API está desplegada en Heroku y se puede acceder a ella a través de este enlace: https://tour-of-heroes-api.herokuapp.com/"
             />
             <CardPortfolio
               img="/img/clon.jpeg"
               title="Clon layout de Spotify"
               description="Clon del Diseño de Spotify: Una recreación fiel del diseño de la interfaz de usuario de Spotify."
+
+              projectStatus="Terminado"
+              additionalInfo="La API está desplegada en Heroku y se puede acceder a ella a través de este enlace: https://tour-of-heroes-api.herokuapp.com/"
             />
             <CardPortfolio
               img="/img/todo.jpeg"
               title="Api de una ToDo App"
               description="Una API simple de Tareas Pendientes (ToDo) desarrollada con Spring Framework."
+
+              projectStatus="Terminado"
+              additionalInfo="La API está desplegada en Heroku y se puede acceder a ella a través de este enlace: https://tour-of-heroes-api.herokuapp.com/"  
             />
           </div>
         </div>
         <footer>
-          <div className="bg-primaryBG rounded-t-lg w-full py-5 px-10 text-center text-sm text-text-secondary">
+          <div className="bg-primaryBG rounded-t-lg w-full py-3 px-10 text-center text-sm text-text-secondary">
             <p>
               Creado como parte de un trabajo para la materia de Ingeniería Web.
               Hecho con Next.js y Tailwind CSS.
             </p>
 
             <div className="container">
-              <hr className="m-3" />
+              <hr className="m-2" />
             </div>
 
             <span>

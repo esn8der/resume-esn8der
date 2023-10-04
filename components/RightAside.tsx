@@ -9,16 +9,17 @@ const RightAside = () => {
       <h3 className="text-xl font-bold">Enlaces</h3>
 
       <div className="flex flex-col gap-4 items-center">
-        <Link href="https://github.com/esn8der" target="_blank">
+        <Link href="https://github.com/esn8der" target="_blank" aria-label="Enlace a Github">
           <SocialMediaLogo Icon={FaGithub} />
         </Link>
         <Link
           href="https://www.linkedin.com/in/esneider-ballesta-paredes-95340b272/"
           target="_blank"
+          aria-label="Enlace a Linkedin"
         >
           <SocialMediaLogo Icon={FaLinkedinIn} />
         </Link>
-        <Link href="mailto:ballesta.esneider@gmail.com">
+        <Link href="mailto:ballesta.esneider@gmail.com" aria-label="Enlace a Gmail">
           <SocialMediaLogo Icon={SiGmail} />
         </Link>
       </div>

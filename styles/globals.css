@@ -36,9 +36,11 @@ body {
 
 .background {
   background: #1b1b38;
-  background-image: url('/img/pattern.svg'),linear-gradient(to bottom,rgb(103 0 255 / 15%),transparent),linear-gradient(to bottom left,rgb(255 0 201 / 10%),transparent 50%);
-  background-size: 4px 4px,100vw 200vh,100vw 200vh;
-  background-repeat: repeat,no-repeat,no-repeat
+  background-image: url("/img/pattern.svg"),
+    linear-gradient(to bottom, rgb(103 0 255 / 15%), transparent),
+    linear-gradient(to bottom left, rgb(255 0 201 / 10%), transparent 50%);
+  background-size: 4px 4px, 100vw 200vh, 100vw 200vh;
+  background-repeat: repeat, no-repeat, no-repeat;
 }
 
 .brak {
@@ -60,4 +62,9 @@ body {
 .enlace:hover {
   background-size: 20px 2px, 0 2px, 100% 2px;
   background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+}
+
+.temp {
+  background-color: #1b1b38;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='46' height='46' fill-opacity='0.6' fill='%23222246'/%3E%3C/svg%3E");
 }

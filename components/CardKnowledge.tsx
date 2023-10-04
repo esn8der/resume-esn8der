@@ -18,7 +18,7 @@ const CardKnowledge = ({ knowledgeData }: CardKnowledgeProps) => {
         >
           <knowledge.Icon className="text-8xl text-emerald-500 group-hover:text-[#005639]" />
           <div className="space-y-4 mt-6">
-            <h4>{knowledge.title}</h4>
+            <h3>{knowledge.title}</h3>
             <p className="text-text-secondary">
               {knowledge.description}
             </p>
