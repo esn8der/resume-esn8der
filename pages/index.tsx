@@ -2,6 +2,7 @@ import { CardEducation } from "@/components/CardEducation";
 import { CardKnowledge } from "@/components/CardKnowledge";
 import { LefAside } from "@/components/LeftAside";
 import { RightAside } from "@/components/RightAside";
+import { HireMeDialog } from "@/components/dialogs/HireMeDialog";
 import { Oxanium } from "next/font/google";
 import Image from "next/image";
 
@@ -71,10 +72,11 @@ export default function Home() {
               construcción de aplicaciones robustas y completas que tengan un
               impacto positivo en el mundo.
             </p>
-            <button className="bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-8 py-3 mt-10">
+            {/* <button className="bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-8 py-3 mt-10">
               Hire Me
               <BsArrowRightShort className="inline-block ml-1 text-2xl group-hover:translate-x-1 transition-transform duration-300 ease-in" />
-            </button>
+            </button> */}
+            <HireMeDialog />
           </div>
           <div className="justify-self-center self-end ">
             <Image src="/img/man.png" alt="hero" width={280} height={430} />
