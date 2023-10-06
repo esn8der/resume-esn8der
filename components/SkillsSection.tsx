@@ -10,7 +10,7 @@ const SkillsSection = ({ skills }: SkillsSectionProps) => (
     {skills.map((skill, index) => (
       <div key={index} className="flex gap-4">
         <TbLayersIntersect className="stroke-emerald-500 text-xl scale-x-[-1]" />
-        <p className="text-[#c6c4d0]">{skill}</p>
+        <p className="text-text-secondary">{skill}</p>
       </div>
     ))}
   </div>

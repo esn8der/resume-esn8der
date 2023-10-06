@@ -9,7 +9,7 @@ const ProgressBar = ({ name, progress }: ProgressBarProps) => {
 
   return (
     <div className="space-y-[4px]">
-      <div className="flex justify-between text-[#c6c4d0]">
+      <div className="flex justify-between text-text-secondary">
         <h4>{name}</h4>
         <h4>{progress}%</h4>
       </div>
