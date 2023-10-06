@@ -57,7 +57,7 @@ function HireMeDialog() {
   return (
     <div>
       <Button
-        className={`${oxanium.className} bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-8 py-3 mt-10`}
+        className={`${oxanium.className} bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-4 py-3 mt-10 `}
         onClick={handleOpen}
       >
         Contrátame
@@ -71,13 +71,17 @@ function HireMeDialog() {
         maxWidth={"xs"}
       >
         <DialogTitle
-          className={`${oxanium.className} font-bold text-3xl text-center`}
+          className={`${oxanium.className} font-bold text-3xl text-center border-x-2 border-t-2 border-gray-700 text-text-primary`}
+          sx={{ bgcolor: "#1f2933" }}
         >
           Formulario de Contacto
         </DialogTitle>
-        <DialogContent>
+        <DialogContent
+          className="flex flex-col gap-4 border-x-2 border-gray-700 "
+          sx={{ bgcolor: "#1f2933" }}
+        >
           <DialogContentText
-            className={`${oxanium.className} font-semibold text-lg text-center`}
+            className={`${oxanium.className} text-md text-center text-text-secondary `}
           >
             Por favor, completa el formulario de contacto.
           </DialogContentText>
@@ -91,6 +95,7 @@ function HireMeDialog() {
               value={formData.name}
               onChange={handleChange}
               required
+              sx={{ backgroundColor: "#283542" }}
             />
             <TextField
               fullWidth
@@ -102,6 +107,7 @@ function HireMeDialog() {
               value={formData.email}
               onChange={handleChange}
               required
+              sx={{ backgroundColor: "#283542" }}
             />
             <TextField
               fullWidth
@@ -114,19 +120,21 @@ function HireMeDialog() {
               value={formData.message}
               onChange={handleChange}
               required
+              sx={{ backgroundColor: "#283542" }}
             />
           </form>
         </DialogContent>
-        <DialogActions>
+        <DialogActions className="border-x-2 border-b-2 border-gray-700 space-x-2 "
+        sx={{ bgcolor: "#1f2933" }}>
           <Button
             onClick={handleClose}
-            className={`font-semibold ${oxanium.className} hover:text-black hover:scale-105 `}
+            className={`${oxanium.className} hover:text-black hover:scale-105 text-text-primary`}
           >
             Cerrar
           </Button>
           <Button
             onClick={handleSubmit}
-            className={`font-semibold ${oxanium.className} hover:scale-105 px-4 py-3 bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-[#353333] hover:text-text-primary font-semibold rounded-lg`}
+            className={`${oxanium.className} bg-background/50 hover:scale-105 px-2 py-2 bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-primary hover:text-black font-semibold rounded-lg`}
           >
             Enviar
           </Button>

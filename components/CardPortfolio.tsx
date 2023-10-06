@@ -8,6 +8,8 @@ interface CardPortfolioProps {
   description: string;
   projectStatus: string;
   additionalInfo: string;
+  languages: string[];
+  link: string;
 }
 
 const CardPortfolio = ({
@@ -16,6 +18,8 @@ const CardPortfolio = ({
   description,
   projectStatus,
   additionalInfo,
+  languages,
+  link,
 }: CardPortfolioProps) => {
   const [dialogOpen, setDialogOpen] = useState(false);
 
@@ -56,6 +60,8 @@ const CardPortfolio = ({
         img={img}
         projectStatus={projectStatus}
         additionalInfo={additionalInfo}
+        languages={languages}
+        link={link}
       />
     </div>
   );

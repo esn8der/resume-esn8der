@@ -15,7 +15,11 @@ const LefAside = () => {
     <aside className=" flex flex-col w-full max-w-[20%] min-w-fit h-full bg-primaryBG text-white items-center rounded-lg ">
       <div className="relative flex flex-col h-fit mx-[74px] mt-10  text-center items-center">
         <Tooltip title="Disponible para trabajar" placement="right">
-          <span className="absolute flex h-5 w-5 bottom-24 left-[143px]">
+          <span
+            className="absolute flex h-5 w-5 bottom-24 left-[143px]"
+            aria-label="Disponible para trabajar"
+            role="tooltip"
+          >
             <span className="animate-ping absolute h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
             <span className="rounded-full h-full w-full bg-emerald-500"></span>
           </span>
