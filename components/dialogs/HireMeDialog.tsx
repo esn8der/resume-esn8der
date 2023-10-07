@@ -57,8 +57,20 @@ function HireMeDialog() {
   return (
     <div>
       <Button
-        sx={{ fontFamily: oxanium.style.fontFamily }}
-        className="bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-4 py-3 mt-10"
+        sx={{
+          color: "#C4C4FF",
+          fontFamily: oxanium.style.fontFamily,
+          transition: "all",
+          transitionTimingFunction: "ease-in",
+          transitionDuration: "200ms",
+          fontWeight: "semibold",
+          borderRadius: "8px",
+          px: "1rem",
+          py: "0.75rem",
+          mt: "2.5rem",
+          "&:hover": { transform: "scale(1.05)", color: "#fff" },
+        }}
+        className="bg-gradient-to-l from-[#005639] group to-[#00d68f]"
         onClick={handleOpen}
       >
         Contrátame
@@ -127,20 +139,42 @@ function HireMeDialog() {
           </form>
         </DialogContent>
         <DialogActions
-          sx={{ bgcolor: "#1f2933" }}
-          className="border-x-2 border-b-2 border-gray-700 space-x-2 "
+          sx={{
+            bgcolor: "#1f2933",
+            gap: "0.5rem",
+            borderWidth: "2px",
+            borderColor: "#374151",
+            borderTopWidth: "0px",
+          }}
         >
           <Button
-            sx={{ fontFamily: oxanium.style.fontFamily }}
+            sx={{
+              fontFamily: oxanium.style.fontFamily,
+              color: "#fff",
+              transition: "all",
+              transitionTimingFunction: "ease-in",
+              transitionDuration: "200ms",
+              fontWeight: "semibold",
+              "&:hover": { transform: "scale(1.05)", color: "#000" },
+            }}
             onClick={handleClose}
-            className="hover:text-black hover:scale-105 text-text-primary"
           >
             Cerrar
           </Button>
           <Button
-            sx={{ fontFamily: oxanium.style.fontFamily }}
+            sx={{
+              color: "#fff",
+              fontFamily: oxanium.style.fontFamily,
+              transition: "all",
+              transitionTimingFunction: "ease-in",
+              transitionDuration: "200ms",
+              fontWeight: "semibold",
+              borderRadius: "8px",
+              p: "0.5rem",
+              "&:hover": { transform: "scale(1.05)", color: "#000" },
+            }}
             onClick={handleSubmit}
-            className="bg-background/50 hover:scale-105 px-2 py-2 bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-primary hover:text-black font-semibold rounded-lg"
+            className="bg-gradient-to-l from-[#005639] to-[#00d68f]"
           >
             Enviar
           </Button>

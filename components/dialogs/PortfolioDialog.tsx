@@ -80,17 +80,17 @@ const PortfolioDialog = ({
       TransitionComponent={Transition}
       maxWidth={"xs"}
       fullWidth={true}
-      sx={{ fontFamily: oxanium.style.fontFamily, }}
+      sx={{ fontFamily: oxanium.style.fontFamily }}
     >
       <DialogTitle
         className="font-bold text-3xl text-center border-x-2 border-t-2 border-gray-700 text-text-primary"
-        sx={{ bgcolor: "#1f2933"}}
+        sx={{ bgcolor: "#1f2933" }}
       >
         {title}
       </DialogTitle>
       <DialogContent
         className="flex flex-col gap-4 border-x-2 border-gray-700"
-        sx={{ bgcolor: "#1f2933"}}
+        sx={{ bgcolor: "#1f2933" }}
       >
         <Image
           className="self-center shadow-lg shadow-black"
@@ -116,17 +116,11 @@ const PortfolioDialog = ({
           )}
         </div>
         <div>
-          <h3 className=" text-xl text-text-primary">
-            Descripción
-          </h3>
-          <p className=" text-text-secondary ">
-            {additionalInfo}
-          </p>
+          <h3 className=" text-xl text-text-primary">Descripción</h3>
+          <p className=" text-text-secondary ">{additionalInfo}</p>
         </div>
         <div>
-          <h3 className=" text-xl text-text-primary">
-            Estado
-          </h3>
+          <h3 className=" text-xl text-text-primary">Estado</h3>
           <span
             className={`${
               projectStatus == "Terminado" ? "bg-emerald-700" : "bg-orange-700"
@@ -142,13 +136,25 @@ const PortfolioDialog = ({
         </div>
       </DialogContent>
       <DialogActions
-        className="border-x-2 border-b-2 border-gray-700 space-x-2"
-        sx={{ bgcolor: "#1f2933" }}
+        sx={{
+          bgcolor: "#1f2933",
+          gap: "0.5rem",
+          borderWidth: "2px",
+          borderColor: "#374151",
+          borderTopWidth: "0px",
+        }}
       >
         <Button
           onClick={onClose}
-          className="hover:text-black hover:scale-105 text-text-primary"
-          sx={{ fontFamily: oxanium.style.fontFamily, }}
+          sx={{
+            fontFamily: oxanium.style.fontFamily,
+            color: "#fff",
+            transition: "all",
+            transitionTimingFunction: "ease-in",
+            transitionDuration: "200ms",
+            fontWeight: "semibold",
+            "&:hover": { transform: "scale(1.05)", color: "#000" },
+          }}
         >
           Cerrar
         </Button>
@@ -160,8 +166,18 @@ const PortfolioDialog = ({
           <Button
             color="primary"
             variant="contained"
-            className="bg-background/50 hover:scale-105 px-2 py-2 bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-primary hover:text-black font-semibold rounded-lg"
-            sx={{ fontFamily: oxanium.style.fontFamily, }}
+            className="bg-gradient-to-l from-[#005639] to-[#00d68f]"
+            sx={{
+              color: "#fff",
+              fontFamily: oxanium.style.fontFamily,
+              transition: "all",
+              transitionTimingFunction: "ease-in",
+              transitionDuration: "200ms",
+              fontWeight: "semibold",
+              borderRadius: "8px",
+              p: "0.5rem",
+              "&:hover": { transform: "scale(1.05)", color: "#000" },
+            }}
           >
             Ver Repositorio
           </Button>
