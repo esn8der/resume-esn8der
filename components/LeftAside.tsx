@@ -26,7 +26,7 @@ const LefAside = () => {
         </Tooltip>
         <Image
           className="rounded-full"
-          src="/img/perfil.jpg"
+          src="/profiles/perfil.jpg"
           alt="Perfil photo"
           width={150}
           height={150}

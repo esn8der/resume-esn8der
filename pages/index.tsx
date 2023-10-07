@@ -72,14 +72,15 @@ export default function Home() {
               construcción de aplicaciones robustas y completas que tengan un
               impacto positivo en el mundo.
             </p>
-            {/* <button className="bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-8 py-3 mt-10">
-              Hire Me
-              <BsArrowRightShort className="inline-block ml-1 text-2xl group-hover:translate-x-1 transition-transform duration-300 ease-in" />
-            </button> */}
             <HireMeDialog />
           </div>
           <div className="justify-self-center self-end ">
-            <Image src="/img/man.png" alt="hero" width={280} height={430} />
+            <Image
+              src="/profiles/man.png"
+              alt="hero"
+              width={280}
+              height={430}
+            />
           </div>
         </div>
 
@@ -179,7 +180,7 @@ export default function Home() {
           </div>
           <div className="flex items-start justify-between gap-8 overflow-x-scroll scrollbox">
             <CardPortfolio
-              img="/img/hero.jpeg"
+              img="/repositories/hero.jpeg"
               title="Tour of Heroes - Api"
               description="API REST para administrar una lista de héroes. Está desarrollada con Spring Boot"
               projectStatus="Terminado"
@@ -192,7 +193,7 @@ export default function Home() {
               link="https://github.com/esn8der/tour-of-heroes-api"
             />
             <CardPortfolio
-              img="/img/angular.jpeg"
+              img="/repositories/angular.jpeg"
               title="Tour of Heroes - Frontend"
               description="Aplicación web desarrollada con Angular que demuestra mis habilidades en el frontend"
               projectStatus="Terminado"
@@ -205,7 +206,7 @@ export default function Home() {
               link="https://github.com/esn8der/angular-tour-of-heroes"
             />
             <CardPortfolio
-              img="/img/clon.jpeg"
+              img="/repositories/clon.jpeg"
               title="Clon layout de Spotify"
               description="Clon del Diseño de Spotify: Una recreación fiel del diseño de la interfaz de usuario de Spotify."
               projectStatus="Terminado"
@@ -217,7 +218,7 @@ export default function Home() {
               link="https://github.com/esn8der/spotify-sections"
             />
             <CardPortfolio
-              img="/img/todo.jpeg"
+              img="/repositories/todo.jpeg"
               title="Api de una ToDo App"
               description="Una API simple de Tareas Pendientes (ToDo) desarrollada con Spring Framework."
               projectStatus="En Progreso"
