@@ -8,9 +8,10 @@ import Image from "next/image";
 import Slide from "@mui/material/Slide";
 import Link from "next/link";
 import { TransitionProps } from "@mui/material/transitions";
-import {BiSolidTrafficBarrier, BiSolidFlagCheckered} from "react-icons/bi";
-import { Oxanium } from "next/font/google";
+import { BiSolidTrafficBarrier, BiSolidFlagCheckered } from "react-icons/bi";
+import { styled } from "@mui/material/styles";
 
+import { Oxanium } from "next/font/google";
 const oxanium = Oxanium({ subsets: ["latin"] });
 
 const backgroundColors = [
@@ -40,6 +41,28 @@ interface CardDialogProps {
   link: string;
 }
 
+// // Estilo para el botón de Cerrar
+// const CloseButton = styled(Button)({
+//   color: "#fff",
+//   backgroundColor: "#e53e3e",
+//   fontFamily: oxanium.style.fontFamily,
+//   "&:hover": {
+//     color: "#000",
+//     transform: "scale(1.05)",
+
+//   },
+// });
+
+// // Estilo para el botón de Ver Repositorio
+// const RepositoryButton = styled(Button)({
+//   color: "#fff",
+//   "&:hover": {
+//     backgroundColor: "#059669",
+//     color: "text-black",
+//     transform: "scale(1.05)",
+//   },
+// });
+
 const PortfolioDialog = ({
   open,
   onClose,
@@ -57,9 +80,10 @@ const PortfolioDialog = ({
       TransitionComponent={Transition}
       maxWidth={"xs"}
       fullWidth={true}
+      sx={{ fontFamily: oxanium.style.fontFamily }}
     >
       <DialogTitle
-        className={`${oxanium.className} font-bold text-3xl text-center border-x-2 border-t-2 border-gray-700 text-text-primary`}
+        className="font-bold text-3xl text-center border-x-2 border-t-2 border-gray-700 text-text-primary"
         sx={{ bgcolor: "#1f2933" }}
       >
         {title}
@@ -81,7 +105,7 @@ const PortfolioDialog = ({
               {languages.map((language, index) => (
                 <span
                   key={language}
-                  className={`${oxanium.className} ${
+                  className={`${
                     backgroundColors[index % backgroundColors.length]
                   } inline px-2 w-fit rounded-full shadow-md shadow-black text-sm text-text-primary self-end `}
                 >
@@ -92,47 +116,76 @@ const PortfolioDialog = ({
           )}
         </div>
         <div>
-          <h3 className={`${oxanium.className} text-xl text-text-primary`}>
-            Descripción
-          </h3>
-          <p className={`${oxanium.className}  text-text-secondary `}>
-            {additionalInfo}
-          </p>
+          <h3 className=" text-xl text-text-primary">Descripción</h3>
+          <p className=" text-text-secondary ">{additionalInfo}</p>
         </div>
         <div>
-          <h3 className={`${oxanium.className} text-xl text-text-primary`}>
-            Estado
-          </h3>
+          <h3 className=" text-xl text-text-primary">Estado</h3>
           <span
-            className={`${oxanium.className} ${
-              projectStatus == "Terminado"
-                ? 'bg-emerald-700' : 'bg-orange-700'
+            className={`${
+              projectStatus == "Terminado" ? "bg-emerald-700" : "bg-orange-700"
             } flex items-center gap-2 px-2 w-fit rounded-full shadow-md shadow-black text-sm text-text-primary self-end `}
-            >
-            {projectStatus == "Terminado" ? <BiSolidFlagCheckered className="text-black" /> : <BiSolidTrafficBarrier className="text-black" />}
+          >
+            {projectStatus == "Terminado" ? (
+              <BiSolidFlagCheckered className="text-black" />
+            ) : (
+              <BiSolidTrafficBarrier className="text-black" />
+            )}
             {projectStatus}
           </span>
         </div>
       </DialogContent>
       <DialogActions
-        className="border-x-2 border-b-2 border-gray-700 space-x-2"
-        sx={{ bgcolor: "#1f2933" }}
+        sx={{
+          bgcolor: "#1f2933",
+          gap: "0.5rem",
+          borderWidth: "2px",
+          borderColor: "#374151",
+          borderTopWidth: "0px",
+        }}
       >
         <Button
           onClick={onClose}
-          className={`${oxanium.className} hover:text-black hover:scale-105 text-text-primary`}
+          sx={{
+            fontFamily: oxanium.style.fontFamily,
+            color: "#fff",
+            transition: "all",
+            transitionTimingFunction: "ease-in",
+            transitionDuration: "200ms",
+            fontWeight: "semibold",
+            "&:hover": { transform: "scale(1.05)", color: "#000" },
+          }}
         >
           Cerrar
         </Button>
-        <Link href={link} target="_blank" arial-aria-label="Enlace al repositorio en github" >
+        <Link
+          href={link}
+          target="_blank"
+          arial-aria-label="Enlace al repositorio en github"
+        >
           <Button
             color="primary"
             variant="contained"
-            className={`${oxanium.className} bg-background/50 hover:scale-105 px-2 py-2 bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-primary hover:text-black font-semibold rounded-lg`}
+            className="bg-gradient-to-l from-[#005639] to-[#00d68f]"
+            sx={{
+              color: "#fff",
+              fontFamily: oxanium.style.fontFamily,
+              transition: "all",
+              transitionTimingFunction: "ease-in",
+              transitionDuration: "200ms",
+              fontWeight: "semibold",
+              borderRadius: "8px",
+              p: "0.5rem",
+              "&:hover": { transform: "scale(1.05)", color: "#000" },
+            }}
           >
             Ver Repositorio
           </Button>
         </Link>
+        {/* <CloseButton onClick={onClose}>Cerrar</CloseButton>
+        <RepositoryButton >
+          Ver Repositorio
+        </RepositoryButton> */}
       </DialogActions>
     </Dialog>
   );

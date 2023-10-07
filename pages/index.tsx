@@ -3,14 +3,13 @@ import { CardKnowledge } from "@/components/CardKnowledge";
 import { LefAside } from "@/components/LeftAside";
 import { RightAside } from "@/components/RightAside";
 import { HireMeDialog } from "@/components/dialogs/HireMeDialog";
-import { Oxanium } from "next/font/google";
-import Image from "next/image";
-
 import { CardPortfolio } from "@/components/CardPortfolio";
-import { BsArrowRightShort, BsDatabaseGear, BsGear } from "react-icons/bs";
+import { BsDatabaseGear, BsGear } from "react-icons/bs";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
 import { MdOutlineChevronRight, MdOutlineManageAccounts } from "react-icons/md";
 import { SiSpringsecurity } from "react-icons/si";
+import { Oxanium } from "next/font/google";
+import Image from "next/image";
 
 const oxanium = Oxanium({ subsets: ["latin"] });
 
