@@ -46,7 +46,7 @@ const CardPortfolio = ({
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         <p className="text-text-secondary">{description}</p>
         <a
-          className="mt-2 text-text-secondary text-md font-semibold enlace cursor-pointer"
+          className="mt-2 text-text-secondary text-md font-semibold links cursor-pointer"
           onClick={handleOpenDialog}
         >
           Leer más

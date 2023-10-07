@@ -62,7 +62,7 @@ export default function Home() {
               estudiante
             </h1>
 
-            <p className="text-[16px] leading-6 text-text-secondary font-normal mt-5 whitespace-normal line-clamp-6 ">
+            <p className="text-[16px] leading-6 text-text-secondary font-normal mt-5 whitespace-normal line-clamp-6 adjust-text">
               Soy un estudiante de Ingeniería de Sistemas con un fuerte interés
               tanto en el desarrollo backend, centrado en Java y Spring Boot,
               como en el frontend, donde estoy explorando tecnologías como
@@ -109,7 +109,7 @@ export default function Home() {
                 la interacción y el crecimiento.
               </p>
               <div className="text-amarillo cursor-pointer">
-                <a className="enlace flex items-center group">
+                <a className="links flex items-center group">
                   Ordenar ya
                   <MdOutlineChevronRight className="text-xl group-hover:translate-x-1 transition-transform duration-300 ease-in-out" />
                 </a>
@@ -123,7 +123,7 @@ export default function Home() {
             <h2 className="text-[32px] leading-10 text-text-primary font-bold">
               Educación
             </h2>
-            <p className="text-[15px] leading-6 text-text-secondary font-normal mt-6 whitespace-normal line-clamp-6">
+            <p className="text-[15px] leading-6 text-text-secondary font-normal mt-6 whitespace-normal line-clamp-6 text-left">
               En mis estudios y proyectos, me he centrado en el desarrollo
               backend, adquiriendo conocimientos sólidos en Java y Spring Boot.
               Además, he comenzado a explorar el mundo del frontend,
@@ -169,7 +169,7 @@ export default function Home() {
             <h2 className="text-[32px] leading-10 text-text-primary font-bold">
               Portafolio
             </h2>
-            <p className="text-[15px] leading-6 text-text-secondary font-normal mt-6 whitespace-normal line-clamp-6">
+            <p className="text-[15px] leading-6 text-text-secondary font-normal mt-6 whitespace-normal line-clamp-6 text-left">
               A lo largo de mi viaje en el mundo del desarrollo de software, he
               tenido el privilegio de trabajar en una variedad de proyectos que
               abarcan desde el desarrollo backend hasta el frontend. Mi pasión
@@ -245,8 +245,9 @@ export default function Home() {
             <span>
               Por{" "}
               <a
+                className="text-blue-500 links"
                 href="https://github.com/esn8der"
-                className="text-blue-500 enlace"
+                target="_blank"
               >
                 @esn8der
               </a>
