@@ -8,9 +8,10 @@ import Image from "next/image";
 import Slide from "@mui/material/Slide";
 import Link from "next/link";
 import { TransitionProps } from "@mui/material/transitions";
-import {BiSolidTrafficBarrier, BiSolidFlagCheckered} from "react-icons/bi";
-import { Oxanium } from "next/font/google";
+import { BiSolidTrafficBarrier, BiSolidFlagCheckered } from "react-icons/bi";
+import { styled } from "@mui/material/styles";
 
+import { Oxanium } from "next/font/google";
 const oxanium = Oxanium({ subsets: ["latin"] });
 
 const backgroundColors = [
@@ -39,6 +40,28 @@ interface CardDialogProps {
   languages: string[];
   link: string;
 }
+
+// // Estilo para el botón de Cerrar
+// const CloseButton = styled(Button)({
+//   color: "#fff",
+//   backgroundColor: "#e53e3e",
+//   fontFamily: oxanium.style.fontFamily,
+//   "&:hover": {
+//     color: "#000",
+//     transform: "scale(1.05)",
+
+//   },
+// });
+
+// // Estilo para el botón de Ver Repositorio
+// const RepositoryButton = styled(Button)({
+//   color: "#fff",
+//   "&:hover": {
+//     backgroundColor: "#059669",
+//     color: "text-black",
+//     transform: "scale(1.05)",
+//   },
+// });
 
 const PortfolioDialog = ({
   open,
@@ -105,11 +128,14 @@ const PortfolioDialog = ({
           </h3>
           <span
             className={`${oxanium.className} ${
-              projectStatus == "Terminado"
-                ? 'bg-emerald-700' : 'bg-orange-700'
+              projectStatus == "Terminado" ? "bg-emerald-700" : "bg-orange-700"
             } flex items-center gap-2 px-2 w-fit rounded-full shadow-md shadow-black text-sm text-text-primary self-end `}
-            >
-            {projectStatus == "Terminado" ? <BiSolidFlagCheckered className="text-black" /> : <BiSolidTrafficBarrier className="text-black" />}
+          >
+            {projectStatus == "Terminado" ? (
+              <BiSolidFlagCheckered className="text-black" />
+            ) : (
+              <BiSolidTrafficBarrier className="text-black" />
+            )}
             {projectStatus}
           </span>
         </div>
@@ -120,19 +146,29 @@ const PortfolioDialog = ({
       >
         <Button
           onClick={onClose}
-          className={`${oxanium.className} hover:text-black hover:scale-105 text-text-primary`}
+          className={`hover:text-black hover:scale-105 text-text-primary`}
+          sx={{ fontFamily: oxanium.style.fontFamily, }}
         >
           Cerrar
         </Button>
-        <Link href={link} target="_blank" arial-aria-label="Enlace al repositorio en github" >
+        <Link
+          href={link}
+          target="_blank"
+          arial-aria-label="Enlace al repositorio en github"
+        >
           <Button
             color="primary"
             variant="contained"
-            className={`${oxanium.className} bg-background/50 hover:scale-105 px-2 py-2 bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-primary hover:text-black font-semibold rounded-lg`}
+            className={`bg-background/50 hover:scale-105 px-2 py-2 bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-primary hover:text-black font-semibold rounded-lg`}
+            sx={{ fontFamily: oxanium.style.fontFamily, }}
           >
             Ver Repositorio
           </Button>
         </Link>
+        {/* <CloseButton onClick={onClose}>Cerrar</CloseButton>
+        <RepositoryButton >
+          Ver Repositorio
+        </RepositoryButton> */}
       </DialogActions>
     </Dialog>
   );

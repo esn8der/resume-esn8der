@@ -57,8 +57,9 @@ function HireMeDialog() {
   return (
     <div>
       <Button
-        className={`${oxanium.className} bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-4 py-3 mt-10 `}
+        className={`bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-4 py-3 mt-10 `}
         onClick={handleOpen}
+        sx={{ fontFamily: oxanium.style.fontFamily, }}
       >
         Contrátame
         <BsArrowRightShort className="inline-block ml-1 text-2xl group-hover:translate-x-1 transition-transform duration-300 ease-in" />
