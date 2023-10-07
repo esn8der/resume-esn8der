@@ -57,9 +57,9 @@ function HireMeDialog() {
   return (
     <div>
       <Button
-        className={`bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-4 py-3 mt-10 `}
+        sx={{ fontFamily: oxanium.style.fontFamily }}
+        className="bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-secondary hover:text-text-primary font-semibold rounded-lg px-4 py-3 mt-10"
         onClick={handleOpen}
-        sx={{ fontFamily: oxanium.style.fontFamily, }}
       >
         Contrátame
         <BsArrowRightShort className="inline-block ml-1 text-2xl group-hover:translate-x-1 transition-transform duration-300 ease-in" />
@@ -72,17 +72,18 @@ function HireMeDialog() {
         maxWidth={"xs"}
       >
         <DialogTitle
-          className={`${oxanium.className} font-bold text-3xl text-center border-x-2 border-t-2 border-gray-700 text-text-primary`}
-          sx={{ bgcolor: "#1f2933" }}
+          sx={{ bgcolor: "#1f2933", fontFamily: oxanium.style.fontFamily }}
+          className="font-bold text-3xl text-center border-x-2 border-t-2 border-gray-700 text-text-primary"
         >
           Formulario de Contacto
         </DialogTitle>
         <DialogContent
-          className="flex flex-col gap-4 border-x-2 border-gray-700 "
           sx={{ bgcolor: "#1f2933" }}
+          className="flex flex-col gap-4 border-x-2 border-gray-700 "
         >
           <DialogContentText
-            className={`${oxanium.className} text-md text-center text-text-secondary `}
+            className="text-md text-center text-text-secondary"
+            sx={{ fontFamily: oxanium.style.fontFamily }}
           >
             Por favor, completa el formulario de contacto.
           </DialogContentText>
@@ -125,17 +126,21 @@ function HireMeDialog() {
             />
           </form>
         </DialogContent>
-        <DialogActions className="border-x-2 border-b-2 border-gray-700 space-x-2 "
-        sx={{ bgcolor: "#1f2933" }}>
+        <DialogActions
+          sx={{ bgcolor: "#1f2933" }}
+          className="border-x-2 border-b-2 border-gray-700 space-x-2 "
+        >
           <Button
+            sx={{ fontFamily: oxanium.style.fontFamily }}
             onClick={handleClose}
-            className={`${oxanium.className} hover:text-black hover:scale-105 text-text-primary`}
+            className="hover:text-black hover:scale-105 text-text-primary"
           >
             Cerrar
           </Button>
           <Button
+            sx={{ fontFamily: oxanium.style.fontFamily }}
             onClick={handleSubmit}
-            className={`${oxanium.className} bg-background/50 hover:scale-105 px-2 py-2 bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-primary hover:text-black font-semibold rounded-lg`}
+            className="bg-background/50 hover:scale-105 px-2 py-2 bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-primary hover:text-black font-semibold rounded-lg"
           >
             Enviar
           </Button>

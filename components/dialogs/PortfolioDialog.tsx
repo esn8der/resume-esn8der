@@ -80,16 +80,17 @@ const PortfolioDialog = ({
       TransitionComponent={Transition}
       maxWidth={"xs"}
       fullWidth={true}
+      sx={{ fontFamily: oxanium.style.fontFamily, }}
     >
       <DialogTitle
-        className={`${oxanium.className} font-bold text-3xl text-center border-x-2 border-t-2 border-gray-700 text-text-primary`}
-        sx={{ bgcolor: "#1f2933" }}
+        className="font-bold text-3xl text-center border-x-2 border-t-2 border-gray-700 text-text-primary"
+        sx={{ bgcolor: "#1f2933"}}
       >
         {title}
       </DialogTitle>
       <DialogContent
         className="flex flex-col gap-4 border-x-2 border-gray-700"
-        sx={{ bgcolor: "#1f2933" }}
+        sx={{ bgcolor: "#1f2933"}}
       >
         <Image
           className="self-center shadow-lg shadow-black"
@@ -104,7 +105,7 @@ const PortfolioDialog = ({
               {languages.map((language, index) => (
                 <span
                   key={language}
-                  className={`${oxanium.className} ${
+                  className={`${
                     backgroundColors[index % backgroundColors.length]
                   } inline px-2 w-fit rounded-full shadow-md shadow-black text-sm text-text-primary self-end `}
                 >
@@ -115,19 +116,19 @@ const PortfolioDialog = ({
           )}
         </div>
         <div>
-          <h3 className={`${oxanium.className} text-xl text-text-primary`}>
+          <h3 className=" text-xl text-text-primary">
             Descripción
           </h3>
-          <p className={`${oxanium.className}  text-text-secondary `}>
+          <p className=" text-text-secondary ">
             {additionalInfo}
           </p>
         </div>
         <div>
-          <h3 className={`${oxanium.className} text-xl text-text-primary`}>
+          <h3 className=" text-xl text-text-primary">
             Estado
           </h3>
           <span
-            className={`${oxanium.className} ${
+            className={`${
               projectStatus == "Terminado" ? "bg-emerald-700" : "bg-orange-700"
             } flex items-center gap-2 px-2 w-fit rounded-full shadow-md shadow-black text-sm text-text-primary self-end `}
           >
@@ -146,7 +147,7 @@ const PortfolioDialog = ({
       >
         <Button
           onClick={onClose}
-          className={`hover:text-black hover:scale-105 text-text-primary`}
+          className="hover:text-black hover:scale-105 text-text-primary"
           sx={{ fontFamily: oxanium.style.fontFamily, }}
         >
           Cerrar
@@ -159,7 +160,7 @@ const PortfolioDialog = ({
           <Button
             color="primary"
             variant="contained"
-            className={`bg-background/50 hover:scale-105 px-2 py-2 bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-primary hover:text-black font-semibold rounded-lg`}
+            className="bg-background/50 hover:scale-105 px-2 py-2 bg-gradient-to-l from-[#005639] group to-[#00d68f] transition-colors duration-200 ease-in text-text-primary hover:text-black font-semibold rounded-lg"
             sx={{ fontFamily: oxanium.style.fontFamily, }}
           >
             Ver Repositorio
