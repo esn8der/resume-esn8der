@@ -44,7 +44,7 @@ const knowledgeData = [
 export default function Home() {
   return (
     <main
-      className={`${oxanium.className} main`}
+      className={`${oxanium.className} main background`}
     >
       <LefAside />
 
@@ -75,9 +75,9 @@ export default function Home() {
           </div>
           <div className="justify-self-center self-end ">
             <Image
-              src="/profiles/man.png"
+              src="/profiles/principal.png"
               alt="hero"
-              width={280}
+              width={320}
               height={430}
             />
           </div>
