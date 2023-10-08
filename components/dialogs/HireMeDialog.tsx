@@ -10,6 +10,7 @@ import TextField from "@mui/material/TextField";
 import { BsArrowRightShort } from "react-icons/bs";
 import DialogContentText from "@mui/material/DialogContentText";
 import { Oxanium } from "next/font/google";
+import {enqueueSnackbar } from "notistack";
 
 const oxanium = Oxanium({ subsets: ["latin"] });
 
@@ -22,36 +23,21 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-function HireMeDialog() {
+const HireMeDialog = () => {
+
   const [isDialogOpen, setOpen] = useState(false);
 
-  // Función para abrir el diálogo
   const handleOpen = () => {
     setOpen(true);
   };
 
-  // Función para cerrar el diálogo
   const handleClose = () => {
     setOpen(false);
   };
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (event: { target: { name: any; value: any } }) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (event: { preventDefault: () => void }) => {
-    event.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario o realizar otras acciones
-    console.log(formData);
-    // Cerrar el modal después de enviar el formulario
+  const handleSubmit = () => {
     handleClose();
+    enqueueSnackbar('Mensaje Enviado!', { variant: 'success' })
   };
 
   return (
@@ -84,30 +70,47 @@ function HireMeDialog() {
         maxWidth={"xs"}
       >
         <DialogTitle
-          sx={{ bgcolor: "#1f2933", fontFamily: oxanium.style.fontFamily }}
-          className="font-bold text-3xl text-center border-x-2 border-t-2 border-gray-700 text-text-primary"
+          sx={{
+            color: "#fff",
+            bgcolor: "#1f2933",
+            fontFamily: oxanium.style.fontFamily,
+            fontSize: "1.875rem",
+            lineHeight: "2.25rem",
+            fontWeight: "bold",
+            borderWidth: "2px",
+            borderColor: "#374151",
+            borderBottomWidth: "0px",
+            textAlign: "center",
+          }}
         >
           Formulario de Contacto
         </DialogTitle>
         <DialogContent
-          sx={{ bgcolor: "#1f2933" }}
-          className="flex flex-col gap-4 border-x-2 border-gray-700 "
+          sx={{
+            bgcolor: "#1f2933",
+            borderWidth: "2px",
+            borderColor: "#374151",
+            borderTopWidth: "0px",
+            borderBottomWidth: "0px",
+          }}
+          className="flex flex-col gap-4 "
         >
           <DialogContentText
-            className="text-md text-center text-text-secondary"
-            sx={{ fontFamily: oxanium.style.fontFamily }}
+            sx={{
+              fontFamily: oxanium.style.fontFamily,
+              textAlign: "center",
+              color: "#C4C4FF",
+            }}
           >
             Por favor, completa el formulario de contacto.
           </DialogContentText>
-          <form onSubmit={handleSubmit}>
+          <form >
             <TextField
               fullWidth
               label="Nombre"
               name="name"
               variant="filled"
               margin="normal"
-              value={formData.name}
-              onChange={handleChange}
               required
               sx={{ backgroundColor: "#283542" }}
             />
@@ -118,8 +121,6 @@ function HireMeDialog() {
               type="email"
               variant="filled"
               margin="normal"
-              value={formData.email}
-              onChange={handleChange}
               required
               sx={{ backgroundColor: "#283542" }}
             />
@@ -131,8 +132,6 @@ function HireMeDialog() {
               rows={4}
               variant="filled"
               margin="normal"
-              value={formData.message}
-              onChange={handleChange}
               required
               sx={{ backgroundColor: "#283542" }}
             />
