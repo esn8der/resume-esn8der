@@ -129,6 +129,6 @@ body {
   @apply before:absolute before:-inset-0.5 before:-skew-y-1 before:bg-emerald-400 relative inline-block;
 }
 
-.chevron {
-  @apply text-xl group-hover:translate-x-1 transition-transform duration-300 ease-in-out;
+.arrows {
+  @apply group-hover:translate-x-1 transition-transform duration-300 ease-in;
 }

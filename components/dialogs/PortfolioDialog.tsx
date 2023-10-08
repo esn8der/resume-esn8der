@@ -1,15 +1,18 @@
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Slide,
+} from "@mui/material";
 import React from "react";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
-import Button from "@mui/material/Button";
 import Image from "next/image";
-import Slide from "@mui/material/Slide";
 import Link from "next/link";
 import { TransitionProps } from "@mui/material/transitions";
 import { BiSolidTrafficBarrier, BiSolidFlagCheckered } from "react-icons/bi";
 import { Oxanium } from "next/font/google";
+
 const oxanium = Oxanium({ subsets: ["latin"] });
 
 const backgroundColors = [
@@ -49,7 +52,6 @@ const PortfolioDialog = ({
   languages,
   link,
 }: PortfolioDialogProps) => {
-  //TODO: Crear temas para MUI
   return (
     <Dialog
       open={open}
@@ -59,22 +61,10 @@ const PortfolioDialog = ({
       fullWidth={true}
       sx={{ fontFamily: oxanium.style.fontFamily }}
     >
-      <DialogTitle
-        className="font-bold text-3xl text-center border-x-2 border-t-2 border-gray-700 text-text-primary"
-        sx={{ bgcolor: "#1f2933" }}
-      >
+      <DialogTitle className="font-bold text-3xl text-center border-x-2 border-t-2 border-gray-700 text-text-primary">
         {title}
       </DialogTitle>
-      <DialogContent
-        className="flex flex-col gap-4 border-x-2 border-gray-700"
-        sx={{
-          bgcolor: "#1f2933",
-          borderWidth: "2px",
-          borderColor: "#374151",
-          borderTopWidth: "0px",
-          borderBottomWidth: "0px",
-        }}
-      >
+      <DialogContent className="flex flex-col gap-4 border-x-2 border-gray-700">
         <Image
           className="self-center shadow-lg shadow-black"
           src={img}
@@ -102,7 +92,7 @@ const PortfolioDialog = ({
           <h3 className=" text-xl text-text-primary">Descripción</h3>
           <p className=" text-text-secondary ">{additionalInfo}</p>
         </div>
-        <div>
+        <div className="space-y-2">
           <h3 className=" text-xl text-text-primary">Estado</h3>
           <span
             className={`${
@@ -118,27 +108,8 @@ const PortfolioDialog = ({
           </span>
         </div>
       </DialogContent>
-      <DialogActions
-        sx={{
-          bgcolor: "#1f2933",
-          gap: "0.5rem",
-          borderWidth: "2px",
-          borderColor: "#374151",
-          borderTopWidth: "0px",
-        }}
-      >
-        <Button
-          onClick={onClose}
-          sx={{
-            fontFamily: oxanium.style.fontFamily,
-            color: "#fff",
-            transition: "all",
-            transitionTimingFunction: "ease-in",
-            transitionDuration: "200ms",
-            fontWeight: "semibold",
-            "&:hover": { transform: "scale(1.05)", color: "#000" },
-          }}
-        >
+      <DialogActions>
+        <Button onClick={onClose} sx={{ p: "0.5rem" }}>
           Cerrar
         </Button>
         <Link
@@ -149,18 +120,8 @@ const PortfolioDialog = ({
           <Button
             color="primary"
             variant="contained"
-            className="bg-gradient-to-l from-[#005639] to-[#00d68f]"
-            sx={{
-              color: "#fff",
-              fontFamily: oxanium.style.fontFamily,
-              transition: "all",
-              transitionTimingFunction: "ease-in",
-              transitionDuration: "200ms",
-              fontWeight: "semibold",
-              borderRadius: "8px",
-              p: "0.5rem",
-              "&:hover": { transform: "scale(1.05)", color: "#000" },
-            }}
+            className="bg-gradient-to-b from-[#005639] to-[#00d68f]"
+            sx={{ p: "0.5rem" }}
           >
             Ver Repositorio
           </Button>
