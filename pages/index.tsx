@@ -107,9 +107,9 @@ export default function Home() {
                 Integrando estrategias de marketing y publicidad para estimular
                 la interacción y el crecimiento.
               </p>
-              <button className="links flex items-center group cursor-pointer">
+              <button className="links flex items-center group cursor-pointer hover:scale-105">
                 Ordenar ya
-                <MdOutlineChevronRight className="chevron" />
+                <MdOutlineChevronRight className="arrows text-2xl" />
               </button>
             </div>
           </div>
