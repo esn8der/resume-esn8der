@@ -68,3 +68,67 @@ body {
   background-color: #1b1b38;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='46' height='46' fill-opacity='0.6' fill='%23222246'/%3E%3C/svg%3E");
 }
+
+/* TODO: aplicar estilos de tailwind en clases */
+.main {
+  @apply flex flex-row h-screen justify-between background gap-4 p-4;
+}
+
+.presentation-main {
+  @apply flex flex-col gap-11 w-max rounded-t-lg overflow-x-hidden overflow-y-scroll;
+}
+
+.profile-description {
+  @apply text-[16px] leading-6 text-text-secondary font-normal mt-5 whitespace-normal line-clamp-6 adjust-text;
+}
+
+.main-container-section {
+  @apply flex flex-col w-full;
+}
+
+.section-container {
+  @apply flex flex-col text-center px-48 mb-12;
+}
+
+.section-title {
+  @apply text-[32px] leading-10 text-text-primary font-bold;
+}
+
+.section-description {
+  @apply text-[15px] leading-6 text-text-secondary font-normal mt-6 whitespace-normal line-clamp-6 text-left;
+}
+
+.card-knowledge-container {
+  @apply grid sm:grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3 gap-5;
+}
+
+.card-knowledge {
+  @apply flex flex-col bg-primaryBG items-center text-center text-text-primary pt-6 pb-10 mx-2 shadow-lg shadow-emerald-500 rounded-lg hover:scale-95;
+}
+
+.last-card-knowledge {
+  @apply flex flex-col bg-primaryBG items-center text-center gap-4 px-14 py-10 mx-2 shadow-lg shadow-emerald-500 rounded-lg hover:scale-95 justify-center;
+}
+
+.card-portfolio-container {
+  @apply flex items-start justify-between gap-8 overflow-x-scroll;
+}
+
+.footer {
+  @apply bg-primaryBG rounded-t-lg w-full py-3 px-10 text-center text-sm text-text-secondary;
+}
+
+.presentation-container {
+  @apply grid grid-flow-col bg-primaryBG w-full px-16 gap-32 rounded-lg;
+}
+.principal-title {
+  @apply text-[48px] tracking-tighter leading-snug text-text-primary font-bold relative whitespace-normal line-clamp-3;
+}
+
+.accent-title {
+  @apply before:absolute before:-inset-0.5 before:-skew-y-1 before:bg-emerald-400 relative inline-block;
+}
+
+.chevron {
+  @apply text-xl group-hover:translate-x-1 transition-transform duration-300 ease-in-out;
+}

@@ -44,24 +44,24 @@ const knowledgeData = [
 export default function Home() {
   return (
     <main
-      className={`${oxanium.className} flex flex-row h-screen justify-between {bg-lines} background gap-4 p-4`}
+      className={`${oxanium.className} main`}
     >
       <LefAside />
 
-      <div className="flex flex-col gap-11 w-max rounded-t-lg overflow-x-hidden overflow-y-scroll scrollbox">
-        <div className="grid grid-flow-col bg-primaryBG w-full px-16 gap-32 rounded-lg">
+      <div className="presentation-main scrollbox">
+        <div className="presentation-container">
           <div className=" pt-20 pb-10">
-            <h1 className="text-[48px] tracking-tighter leading-snug text-text-primary font-bold relative whitespace-normal line-clamp-3">
+            <h1 className="principal-title">
               Soy Esneider Ballesta,
               <br />
               un{" "}
-              <span className=" before:absolute before:-inset-0.5 before:-skew-y-1 before:bg-emerald-400 relative inline-block">
+              <span className="accent-title">
                 <span className="relative text-green-800">apasionado</span>
               </span>{" "}
               estudiante
             </h1>
 
-            <p className="text-[16px] leading-6 text-text-secondary font-normal mt-5 whitespace-normal line-clamp-6 adjust-text">
+            <p className="profile-description">
               Soy un estudiante de Ingeniería de Sistemas con un fuerte interés
               tanto en el desarrollo backend, centrado en Java y Spring Boot,
               como en el frontend, donde estoy explorando tecnologías como
@@ -83,12 +83,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col w-full ">
-          <div className="flex flex-col text-center px-48 mb-12 ">
-            <h2 className="text-[32px] leading-10 text-text-primary font-bold">
+        <div className="main-container-section ">
+          <div className="section-container">
+            <h2 className="section-title">
               Mis Conocimientos
             </h2>
-            <p className="text-[15px] leading-6 text-text-secondary font-normal mt-6 whitespace-normal line-clamp-6 text-left">
+            <p className="section-description">
               En mis estudios y proyectos, me he centrado en el desarrollo
               backend, adquiriendo conocimientos sólidos en Java y Spring Boot.
               Además, he comenzado a explorar el mundo del frontend,
@@ -99,30 +99,28 @@ export default function Home() {
               mejora de mis habilidades en el desarrollo de software.
             </p>
           </div>
-          <div className="grid sm:grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+          <div className="card-knowledge-container">
             <CardKnowledge knowledgeData={knowledgeData} />
-            <div className="flex flex-col bg-primaryBG items-center justify-center text-center gap-4 px-14 py-10 mx-2 shadow-lg shadow-[#00d68f] rounded-lg hover:scale-95 ">
+            <div className="last-card-knowledge">
               <h3 className="text-text-primary">Publicidad</h3>
               <p className="text-text-secondary self-center whitespace-normal line-clamp-4">
                 Integrando estrategias de marketing y publicidad para estimular
                 la interacción y el crecimiento.
               </p>
-              <div className="text-amarillo cursor-pointer">
-                <a className="links flex items-center group">
-                  Ordenar ya
-                  <MdOutlineChevronRight className="text-xl group-hover:translate-x-1 transition-transform duration-300 ease-in-out" />
-                </a>
-              </div>
+              <button className="links flex items-center group cursor-pointer">
+                Ordenar ya
+                <MdOutlineChevronRight className="chevron" />
+              </button>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col">
-          <div className="flex flex-col text-center px-48 mb-12 ">
-            <h2 className="text-[32px] leading-10 text-text-primary font-bold">
+        <div className="main-container-section">
+          <div className="section-container">
+            <h2 className="section-title">
               Educación
             </h2>
-            <p className="text-[15px] leading-6 text-text-secondary font-normal mt-6 whitespace-normal line-clamp-6 text-left">
+            <p className="section-description">
               En mis estudios y proyectos, me he centrado en el desarrollo
               backend, adquiriendo conocimientos sólidos en Java y Spring Boot.
               Además, he comenzado a explorar el mundo del frontend,
@@ -163,12 +161,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col w-full">
-          <div className="flex flex-col text-center px-48 mb-12 ">
-            <h2 className="text-[32px] leading-10 text-text-primary font-bold">
+        <div className="main-container-section">
+          <div className="section-container">
+            <h2 className="section-title">
               Portafolio
             </h2>
-            <p className="text-[15px] leading-6 text-text-secondary font-normal mt-6 whitespace-normal line-clamp-6 text-left">
+            <p className="section-description">
               A lo largo de mi viaje en el mundo del desarrollo de software, he
               tenido el privilegio de trabajar en una variedad de proyectos que
               abarcan desde el desarrollo backend hasta el frontend. Mi pasión
@@ -177,7 +175,7 @@ export default function Home() {
               crecimiento.
             </p>
           </div>
-          <div className="flex items-start justify-between gap-8 overflow-x-scroll scrollbox">
+          <div className="card-portfolio-container scrollbox">
             <CardPortfolio
               img="/repositories/hero.jpeg"
               title="Tour of Heroes - Api"
@@ -231,7 +229,7 @@ export default function Home() {
         </div>
 
         <footer>
-          <div className="bg-primaryBG rounded-t-lg w-full py-3 px-10 text-center text-sm text-text-secondary">
+          <div className="footer">
             <p>
               Creado como parte de un trabajo para la materia de Ingeniería Web.
               Hecho con Next.js y Tailwind CSS.
