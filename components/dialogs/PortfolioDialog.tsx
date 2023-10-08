@@ -9,8 +9,6 @@ import Slide from "@mui/material/Slide";
 import Link from "next/link";
 import { TransitionProps } from "@mui/material/transitions";
 import { BiSolidTrafficBarrier, BiSolidFlagCheckered } from "react-icons/bi";
-import { styled } from "@mui/material/styles";
-
 import { Oxanium } from "next/font/google";
 const oxanium = Oxanium({ subsets: ["latin"] });
 
@@ -30,7 +28,7 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="left" ref={ref} {...props} />;
 });
 
-interface CardDialogProps {
+interface PortfolioDialogProps {
   open: boolean;
   onClose: () => void;
   title: string;
@@ -41,28 +39,6 @@ interface CardDialogProps {
   link: string;
 }
 
-// // Estilo para el botón de Cerrar
-// const CloseButton = styled(Button)({
-//   color: "#fff",
-//   backgroundColor: "#e53e3e",
-//   fontFamily: oxanium.style.fontFamily,
-//   "&:hover": {
-//     color: "#000",
-//     transform: "scale(1.05)",
-
-//   },
-// });
-
-// // Estilo para el botón de Ver Repositorio
-// const RepositoryButton = styled(Button)({
-//   color: "#fff",
-//   "&:hover": {
-//     backgroundColor: "#059669",
-//     color: "text-black",
-//     transform: "scale(1.05)",
-//   },
-// });
-
 const PortfolioDialog = ({
   open,
   onClose,
@@ -72,7 +48,7 @@ const PortfolioDialog = ({
   additionalInfo,
   languages,
   link,
-}: CardDialogProps) => {
+}: PortfolioDialogProps) => {
   return (
     <Dialog
       open={open}
@@ -90,7 +66,13 @@ const PortfolioDialog = ({
       </DialogTitle>
       <DialogContent
         className="flex flex-col gap-4 border-x-2 border-gray-700"
-        sx={{ bgcolor: "#1f2933" }}
+        sx={{
+          bgcolor: "#1f2933",
+          borderWidth: "2px",
+          borderColor: "#374151",
+          borderTopWidth: "0px",
+          borderBottomWidth: "0px",
+        }}
       >
         <Image
           className="self-center shadow-lg shadow-black"
@@ -182,10 +164,6 @@ const PortfolioDialog = ({
             Ver Repositorio
           </Button>
         </Link>
-        {/* <CloseButton onClick={onClose}>Cerrar</CloseButton>
-        <RepositoryButton >
-          Ver Repositorio
-        </RepositoryButton> */}
       </DialogActions>
     </Dialog>
   );
