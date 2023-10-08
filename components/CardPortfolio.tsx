@@ -45,12 +45,12 @@ const CardPortfolio = ({
       <div className="flex flex-col p-4 max-w-[384px] items-start">
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         <p className="text-text-secondary">{description}</p>
-        <a
-          className="mt-2 text-text-secondary text-md font-semibold links cursor-pointer"
+        <button
+          className="mt-2 text-text-secondary text-md font-semibold links"
           onClick={handleOpenDialog}
         >
           Leer más
-        </a>
+        </button>
       </div>
 
       <PortfolioDialog
