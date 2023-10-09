@@ -35,12 +35,8 @@ body {
 }
 
 .background {
-  background: #1b1b38;
-  background-image: url("/pattern.svg"),
-    linear-gradient(to bottom, rgb(103 0 255 / 15%), transparent),
-    linear-gradient(to bottom left, rgb(255 0 201 / 10%), transparent 50%);
-  background-size: 4px 4px, 100vw 200vh, 100vw 200vh;
-  background-repeat: repeat, no-repeat, no-repeat;
+  background-color: #1b1b38;
+  background-image: url("/square.svg");
 }
 
 .adjust-text {
@@ -64,14 +60,8 @@ body {
   background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
 }
 
-.temp {
-  background-color: #1b1b38;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='46' height='46' fill-opacity='0.6' fill='%23222246'/%3E%3C/svg%3E");
-}
-
-/* TODO: aplicar estilos de tailwind en clases */
 .main {
-  @apply flex flex-row h-screen justify-between background gap-4 p-4;
+  @apply flex flex-row h-screen justify-between gap-4 p-4;
 }
 
 .presentation-main {
