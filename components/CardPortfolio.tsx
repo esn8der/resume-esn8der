@@ -49,7 +49,7 @@ const CardPortfolio = ({
           className="mt-2 text-text-secondary text-md font-semibold links"
           onClick={handleOpenDialog}
         >
-          Leer más
+          Saber más
         </button>
       </div>
 
