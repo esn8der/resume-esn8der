@@ -10,6 +10,7 @@ import { MdOutlineChevronRight, MdOutlineManageAccounts } from "react-icons/md";
 import { SiSpringsecurity } from "react-icons/si";
 import { Oxanium } from "next/font/google";
 import Image from "next/image";
+import { enqueueSnackbar } from "notistack";
 
 const oxanium = Oxanium({ subsets: ["latin"] });
 
@@ -42,10 +43,12 @@ const knowledgeData = [
 ];
 
 export default function Home() {
+  const handleSubmit = () => {
+    enqueueSnackbar("No disponible!", { variant: "error" });
+  };
+
   return (
-    <main
-      className={`${oxanium.className} main background`}
-    >
+    <main className={`${oxanium.className} main background`}>
       <LefAside />
 
       <div className="presentation-main scrollbox">
@@ -85,9 +88,7 @@ export default function Home() {
 
         <div className="main-container-section ">
           <div className="section-container">
-            <h2 className="section-title">
-              Mis Conocimientos
-            </h2>
+            <h2 className="section-title">Mis Conocimientos</h2>
             <p className="section-description">
               En mis estudios y proyectos, me he centrado en el desarrollo
               backend, adquiriendo conocimientos sólidos en Java y Spring Boot.
@@ -107,7 +108,10 @@ export default function Home() {
                 Integrando estrategias de marketing y publicidad para estimular
                 la interacción y el crecimiento.
               </p>
-              <button className="links flex items-center group cursor-pointer hover:scale-105">
+              <button
+                className="links flex items-center group cursor-pointer hover:scale-105"
+                onClick={handleSubmit}
+              >
                 Ordenar ya
                 <MdOutlineChevronRight className="arrows text-2xl" />
               </button>
@@ -117,9 +121,7 @@ export default function Home() {
 
         <div className="main-container-section">
           <div className="section-container">
-            <h2 className="section-title">
-              Educación
-            </h2>
+            <h2 className="section-title">Educación</h2>
             <p className="section-description">
               En mis estudios y proyectos, me he centrado en el desarrollo
               backend, adquiriendo conocimientos sólidos en Java y Spring Boot.
@@ -163,9 +165,7 @@ export default function Home() {
 
         <div className="main-container-section">
           <div className="section-container">
-            <h2 className="section-title">
-              Portafolio
-            </h2>
+            <h2 className="section-title">Portafolio</h2>
             <p className="section-description">
               A lo largo de mi viaje en el mundo del desarrollo de software, he
               tenido el privilegio de trabajar en una variedad de proyectos que

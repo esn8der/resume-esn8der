@@ -18,7 +18,7 @@ const CardEducation = ({
       <div className="flex flex-row flex-wrap basis-2/3 gap-x-5 ">
         <h3 className="basis-full text-lg font-semibold">{institution}</h3>
         <span className="self-center">{participantStatus}</span>
-        <span className="bg-gradient-to-l from-[#005639] to-emerald-500 text-xs self-center p-1 text-white ">
+        <span className="bg-gradient-to-l from-gradient-primary to-emerald-500 text-xs self-center p-1 text-white ">
           {date}
         </span>
       </div>

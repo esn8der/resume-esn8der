@@ -6,12 +6,12 @@ import {
   DialogTitle,
   Slide,
 } from "@mui/material";
-import React from "react";
+import { TransitionProps } from "@mui/material/transitions";
+import { Oxanium } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { TransitionProps } from "@mui/material/transitions";
-import { BiSolidTrafficBarrier, BiSolidFlagCheckered } from "react-icons/bi";
-import { Oxanium } from "next/font/google";
+import React from "react";
+import { BiSolidFlagCheckered, BiSolidTrafficBarrier } from "react-icons/bi";
 
 const oxanium = Oxanium({ subsets: ["latin"] });
 
@@ -120,7 +120,7 @@ const PortfolioDialog = ({
           <Button
             color="primary"
             variant="contained"
-            className="bg-gradient-to-b from-[#005639] to-[#00d68f]"
+            className="bg-gradient-to-b from-gradient-primary to-[#00d68f]"
             sx={{ p: "0.5rem" }}
           >
             Ver Repositorio

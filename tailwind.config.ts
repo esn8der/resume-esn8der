@@ -16,14 +16,8 @@ const config: Config = {
       colors: {
         "text-primary": "#fff",
         "text-secondary": "#C4C4FF",
-        "verde": "#7EB942",
-        "lines": "#F0F0F6",
-        // ---------------------------------------
-        "background":"#1b1b38",
         "primaryBG": "#323259",
-        "accentBG": "#a16eff",
-        "gradientBT1": "#b18aff",
-        "gradientBT2": "#a16eff",
+        "gradient-primary": "#005639",
       },
     },
   },

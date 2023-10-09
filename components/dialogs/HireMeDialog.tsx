@@ -5,13 +5,13 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  TextField,
   Slide,
+  TextField,
 } from "@mui/material";
+import { TransitionProps } from "@mui/material/transitions";
+import { enqueueSnackbar } from "notistack";
 import React, { useState } from "react";
 import { BsArrowRightShort } from "react-icons/bs";
-import { enqueueSnackbar } from "notistack";
-import { TransitionProps } from "@mui/material/transitions";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -44,7 +44,7 @@ const HireMeDialog = () => {
         sx={{
           mt: "2.5rem",
         }}
-        className="bg-gradient-to-b from-[#005639] group to-[#00d68f]"
+        className="bg-gradient-to-b from-gradient-primary group to-[#00d68f]"
         onClick={handleOpen}
       >
         Contrátame
@@ -96,7 +96,7 @@ const HireMeDialog = () => {
           <Button onClick={handleClose}>Cerrar</Button>
           <Button
             onClick={handleSubmit}
-            className="bg-gradient-to-l from-[#005639] to-[#00d68f]"
+            className="bg-gradient-to-l from-gradient-primary to-[#00d68f]"
           >
             Enviar
           </Button>

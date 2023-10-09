@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { PortfolioDialog } from './dialogs/PortfolioDialog';
+import React, { useState } from "react";
+import Image from "next/image";
+import { PortfolioDialog } from "./dialogs/PortfolioDialog";
 
 interface CardPortfolioProps {
   img: string;

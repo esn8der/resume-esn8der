@@ -1,40 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hoja de Vida - Proyecto de Ingeniería Web
 
-## Getting Started
+Este proyecto consiste en una hoja de vida web desarrollada con Next.js, TypeScript, y Tailwind CSS. Fue creado como parte de la materia de Ingeniería Web bajo la supervisión del profesor Daniel Saldarriaga.
 
-First, run the development server:
+## Índice
 
+- [Requisitos previos](#requisitos-previos)
+- [Configuración](#configuración)
+- [Uso](#uso)
+- [Características Destacadas](#características-destacadas)
+- [Vista Previa](#vista-previa)
+- [Acceso en linea](#acceso-en-línea)
+- [Licencia](#licencia)
+
+## Requisitos previos
+
+Asegúrate de tener instaladas las siguientes herramientas en tu entorno de desarrollo:
+
+- Node.js (v18.17.1)
+- npm (v10.1.0) o Yarn (v1.22.19)
+
+## Configuración
+
+1. Clona este repositorio en tu máquina local.
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/esn8der/resume-esn8der.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Entra en el directorio del proyecto.
+```bash
+cd resume-esn8der
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+3. Instala las dependencias.
+```bash
+npm install
+```
+o también puedes usar
+```bash
+yarn install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Uso
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Este proyecto representa tu hoja de vida en línea y te permite mostrar tu información personal, datos de contacto, idiomas, lenguajes de programación, habilidades adicionales y más.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Puedes personalizar cada sección según tus necesidades y agregar tu propio contenido.
 
-## Learn More
+Para ejecutar el proyecto de manera local, utiliza uno de los siguientes comandos:
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev`
+- `yarn dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Características Destacadas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Desarrollado con Next.js, TypeScript y Tailwind CSS.
+- Utiliza librerías como Material UI para diálogos, botones y transiciones (totalmente personalizables).
+- Implementa notificaciones en pantalla con Notistack.
+- Los íconos son proporcionados por React Icons.
+- Totalmente desplegado en Vercel.
 
-## Deploy on Vercel
+## Vista Previa
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Aquí puedes ver una captura de pantalla de la web de la hoja de vida en línea:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Captura de Pantalla](/public/repositories/web.png)
+
+## Acceso en línea
+
+Puedes acceder a la versión desplegada de este proyecto en Vercel a través del siguiente enlace: [Hoja de Vida en línea](https://resume-esn8der.vercel.app/).
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
