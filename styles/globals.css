@@ -105,11 +105,11 @@ body {
 }
 
 .footer {
-  @apply bg-primaryBG rounded-t-lg w-full py-3 px-10 text-center text-sm text-text-secondary;
+  @apply bg-primaryBG rounded-t-lg w-full py-3 px-10 text-center text-text-secondary;
 }
 
 .presentation-container {
-  @apply grid grid-flow-col bg-primaryBG w-full px-16 gap-32 rounded-lg;
+  @apply grid grid-flow-col bg-primaryBG w-full px-16 gap-28 rounded-lg;
 }
 .principal-title {
   @apply text-[48px] tracking-tighter leading-snug text-text-primary font-bold relative whitespace-normal line-clamp-3;

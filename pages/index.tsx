@@ -11,6 +11,7 @@ import { SiSpringsecurity } from "react-icons/si";
 import { Oxanium } from "next/font/google";
 import Image from "next/image";
 import { enqueueSnackbar } from "notistack";
+import perfil from "../public/profiles/main.png";
 
 const oxanium = Oxanium({ subsets: ["latin"] });
 
@@ -52,8 +53,8 @@ export default function Home() {
       <LefAside />
 
       <div className="presentation-main scrollbox">
-        <div className="presentation-container">
-          <div className=" pt-20 pb-10">
+        <section className="presentation-container">
+          <div className=" pt-20 space-y-5">
             <h1 className="principal-title">
               Soy Esneider Ballesta,
               <br />
@@ -64,7 +65,7 @@ export default function Home() {
               estudiante
             </h1>
 
-            <p className="profile-description">
+            <p className="profile-description adjust-text">
               Soy un estudiante de Ingeniería de Sistemas con un fuerte interés
               tanto en el desarrollo backend, centrado en Java y Spring Boot,
               como en el frontend, donde estoy explorando tecnologías como
@@ -76,17 +77,22 @@ export default function Home() {
             </p>
             <HireMeDialog />
           </div>
-          <div className="justify-self-center self-end ">
+          <picture className="justify-self-center self-end">
             <Image
-              src="/profiles/principal.png"
+              src={perfil}
               alt="hero"
-              width={320}
-              height={430}
+              placeholder="blur"
+              quality={100}
+              style={{
+                width: "100%",
+                maxWidth: "384px",
+                filter: "drop-shadow(12px 0px 13px rgba(0, 0, 0, 0.6))",
+              }}
             />
-          </div>
-        </div>
+          </picture>
+        </section>
 
-        <div className="main-container-section ">
+        <section className="main-container-section ">
           <div className="section-container">
             <h2 className="section-title">Mis Conocimientos</h2>
             <p className="section-description">
@@ -117,9 +123,9 @@ export default function Home() {
               </button>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="main-container-section">
+        <section className="main-container-section">
           <div className="section-container">
             <h2 className="section-title">Educación</h2>
             <p className="section-description">
@@ -161,9 +167,9 @@ export default function Home() {
                           lo que me prepara para proyectos futuros en desarrollo web."
             />
           </div>
-        </div>
+        </section>
 
-        <div className="main-container-section">
+        <section className="main-container-section">
           <div className="section-container">
             <h2 className="section-title">Portafolio</h2>
             <p className="section-description">
@@ -226,20 +232,19 @@ export default function Home() {
               link="https://github.com/esn8der/todo-app"
             />
           </div>
-        </div>
+        </section>
 
-        <footer>
-          <div className="footer">
-            <p>
+        <footer className="footer">
+            <small>
               Creado como parte de un trabajo para la materia de Ingeniería Web.
               Hecho con Next.js y Tailwind CSS.
-            </p>
+            </small>
 
             <div className="container">
               <hr className="m-2" />
             </div>
 
-            <span>
+            <small>
               Por{" "}
               <a
                 className="text-blue-500 links"
@@ -248,8 +253,7 @@ export default function Home() {
               >
                 @esn8der
               </a>
-            </span>
-          </div>
+            </small>
         </footer>
       </div>
       <RightAside />
