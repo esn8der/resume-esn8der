@@ -16,4 +16,4 @@ const SkillsSection = ({ skills }: SkillsSectionProps) => (
   </div>
 );
 
-export default SkillsSection;
+export { SkillsSection };

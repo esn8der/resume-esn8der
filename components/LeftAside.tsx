@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ProgressBar } from "./ProgressBar";
-import SkillsSection from "./SkillsSection";
+import { SkillsSection } from "./SkillsSection";
 import Tooltip from "@mui/material/Tooltip";
 
 const skillsList = [
@@ -10,10 +10,10 @@ const skillsList = [
   "Lógica de Programación",
 ];
 
-const LefAside = () => {
+const LeftAside = () => {
   return (
-    <aside className=" flex flex-col w-full max-w-[20%] min-w-fit h-full bg-primaryBG text-white items-center rounded-lg">
-      <section className="relative flex flex-col h-fit mx-[74px] mt-10  text-center items-center">
+    <aside className=" flex flex-col w-full max-w-[20%] min-w-fit h-full bg-primaryBG text-white items-center rounded-lg overflow-clip">
+      <section className="relative flex flex-col mx-[74px] mt-10  text-center items-center">
         <Tooltip title="Disponible para trabajar" placement="right">
           <span
             className="absolute flex h-5 w-5 bottom-24 left-[143px]"
@@ -89,4 +89,4 @@ const LefAside = () => {
   );
 };
 
-export { LefAside };
+export { LeftAside };

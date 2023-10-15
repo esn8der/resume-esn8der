@@ -1,6 +1,6 @@
 import { CardEducation } from "@/components/CardEducation";
 import { CardKnowledge } from "@/components/CardKnowledge";
-import { LefAside } from "@/components/LeftAside";
+import { LeftAside } from "@/components/LeftAside";
 import { RightAside } from "@/components/RightAside";
 import { HireMeDialog } from "@/components/dialogs/HireMeDialog";
 import { CardPortfolio } from "@/components/CardPortfolio";
@@ -9,8 +9,8 @@ import { LiaLaptopCodeSolid } from "react-icons/lia";
 import { MdOutlineChevronRight, MdOutlineManageAccounts } from "react-icons/md";
 import { SiSpringsecurity } from "react-icons/si";
 import { Oxanium } from "next/font/google";
-import Image from "next/image";
 import { enqueueSnackbar } from "notistack";
+import Image from "next/image";
 import perfil from "../public/profiles/main.png";
 
 const oxanium = Oxanium({ subsets: ["latin"] });
@@ -50,7 +50,7 @@ export default function Home() {
 
   return (
     <main className={`${oxanium.className} main background`}>
-      <LefAside />
+      <LeftAside />
 
       <div className="presentation-main scrollbox">
         <section className="presentation-container">
@@ -157,14 +157,29 @@ export default function Home() {
             </div>
 
             <CardEducation
-              courseName="Introducción a la programación en JavaScript"
+              courseName="Lenguaje de Programación Javascript"
               institution="Universidad Distrital Francisco José de Caldas"
               participantStatus="Student"
-              date="Septiembre 2023 - Actual"
-              description="Actualmente, estoy cursando un programa de 50 horas que se enfoca en JavaScript y la programación web. 
-                          Cubre temas esenciales como variables, tipos de datos y maquetación de aplicativos, así como temas avanzados, 
-                          como interfaces web y bases de datos. El curso se destaca por su enfoque práctico y resolución de desafíos, 
-                          lo que me prepara para proyectos futuros en desarrollo web."
+              date="Septiembre 2023 - octubre 2023"
+              description="Cursé un programa de 50 horas que se enfoca en JavaScript y la programación web. Cubre temas esenciales como variables,
+                          tipos de datos y maquetación de aplicativos, así como temas avanzados, como interfaces web y bases de datos. 
+                          El curso se destaca por su enfoque práctico y resolución de desafíos, lo que me prepara para proyectos futuros en desarrollo web."
+              certificate="https://certificados.planestic.udistrital.edu.co/cert/e8cc126797ac23265e311a1728d6a24f1b90f9a2.pdf"
+            />
+
+            <div className="container">
+              <hr className="m-5" />
+            </div>
+
+            <CardEducation
+              courseName="Universidad Spring - Spring Framework y Spring Boot!"
+              institution="Udemy"
+              participantStatus="Student"
+              date="Julio 2023 - octubre 2023"
+              description="Completé con éxito el curso 'Universidad Spring - Spring Framework y Spring Boot' en Udemy. 
+                          Esta experiencia de aprendizaje abarcó más de 74 horas de contenido en vídeo, lo que me permitió 
+                          sumergirme profundamente en el emocionante mundo de Spring Framework y Spring Boot."
+              certificate="https://udemy-certificate.s3.amazonaws.com/pdf/UC-c0fdd68d-a609-4f87-adc7-57c825e7b505.pdf"
             />
           </div>
         </section>
@@ -235,25 +250,25 @@ export default function Home() {
         </section>
 
         <footer className="footer">
-            <small>
-              Creado como parte de un trabajo para la materia de Ingeniería Web.
-              Hecho con Next.js y Tailwind CSS.
-            </small>
+          <small>
+            Creado como parte de un trabajo para la materia de Ingeniería Web.
+            Hecho con Next.js y Tailwind CSS.
+          </small>
 
-            <div className="container">
-              <hr className="m-2" />
-            </div>
+          <div className="container">
+            <hr className="m-2" />
+          </div>
 
-            <small>
-              Por{" "}
-              <a
-                className="text-blue-500 links"
-                href="https://github.com/esn8der"
-                target="_blank"
-              >
-                @esn8der
-              </a>
-            </small>
+          <small>
+            Por{" "}
+            <a
+              className="text-blue-500 links"
+              href="https://github.com/esn8der"
+              target="_blank"
+            >
+              @esn8der
+            </a>
+          </small>
         </footer>
       </div>
       <RightAside />

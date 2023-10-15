@@ -67,6 +67,7 @@ const HireMeDialog = () => {
               fullWidth
               label="Nombre"
               name="name"
+              autoComplete="name"
               variant="filled"
               margin="normal"
               required
@@ -76,6 +77,7 @@ const HireMeDialog = () => {
               label="Email"
               name="email"
               type="email"
+              autoComplete="email"
               variant="filled"
               margin="normal"
               required
